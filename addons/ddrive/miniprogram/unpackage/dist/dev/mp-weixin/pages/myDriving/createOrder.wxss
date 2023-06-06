@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.popup.data-v-9bad2b16 {
+  height: 100%;
+}
+.popup .destination.data-v-9bad2b16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 10rpx 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.popup .destination text.data-v-9bad2b16 {
+  font-size: 28rpx;
+  color: #d2d2d2;
+}
+.popup .addressHistory.data-v-9bad2b16 {
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  font-size: 24rpx;
+  color: #d2d2d2;
+}
+.popup .addressHistory text.data-v-9bad2b16 {
+  color: #101010;
+  font-size: 28rpx;
+}
+.map.data-v-9bad2b16 {
+  width: 100%;
+  height: calc(100vh - 400rpx);
+}
+.icon.data-v-9bad2b16 {
+  font-size: 48rpx;
+}
+.bottom1.data-v-9bad2b16 {
+  width: 100%;
+  padding: 30rpx;
+}
+.bottom1 .input.data-v-9bad2b16 {
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.bottom1 .input text.data-v-9bad2b16 {
+  width: 10%;
+}
+.bottom1 .input input.data-v-9bad2b16 {
+  width: 90%;
+  padding: 20rpx 0rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.bottom1 .money.data-v-9bad2b16 {
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+          justify-content: space-evenly;
+  font-size: 26rpx;
+  padding: 30rpx;
+}
+.bottom1 button.data-v-9bad2b16 {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #32c45e;
+  font-size: 28rpx;
+}
+.bottom.data-v-9bad2b16 {
+  width: 100%;
+  padding: 30rpx;
+}
+.bottom .input.data-v-9bad2b16 {
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.bottom .input text.data-v-9bad2b16 {
+  width: 10%;
+}
+.bottom .input input.data-v-9bad2b16 {
+  width: 90%;
+  padding: 20rpx 0rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.bottom button.data-v-9bad2b16 {
+  width: 50%;
+  margin-top: 50rpx;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #32c45e;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  -webkit-border-radius: 50rpx;
+          border-radius: 50rpx;
+}
+

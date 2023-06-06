@@ -1,0 +1,100 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
+        </div>
+    </div>
+    <!--<div class="form-group">-->
+        <!--<label class="control-label col-xs-12 col-sm-2">{:__('Order_id')}:</label>-->
+        <!--<div class="col-xs-12 col-sm-8">-->
+            <!--<input id="c-order_id" data-rule="required" data-source="order/index" class="form-control selectpage" name="row[order_id]" type="text" value="{$row.order_id|htmlentities}">-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Order_number')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-order_number" data-rule="required" class="form-control" name="row[order_number]" type="text" value="{$row.order_number|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Number')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-number" class="form-control" name="row[number]" type="text" value="{$row.number|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Refund_number')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-refund_number" class="form-control" name="row[refund_number]" type="text" value="{$row.refund_number|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Account')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-account" data-rule="required" class="form-control" name="row[account]" type="text" value="{$row.account|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pay_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-pay_type" class="form-control selectpicker" name="row[pay_type]">
+                {foreach name="payTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.pay_type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Check_status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            {foreach name="checkStatusList" item="vo"}
+            <label for="row[check_status]-{$key}"><input id="row[check_status]-{$key}" name="row[check_status]" type="radio" value="{$key}" {in name="key" value="$row.check_status"}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Apply_money')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-apply_money" class="form-control" step="0.01" name="row[apply_money]" type="number" value="{$row.apply_money|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Money')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-money" class="form-control" step="0.01" name="row[money]" type="number" value="{$row.money|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Apply_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-apply_time" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[apply_time]" type="text" value="{:$row.apply_time?datetime($row.apply_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Confirm_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-confirm_time" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[confirm_time]" type="text" value="{:$row.confirm_time?datetime($row.confirm_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Success_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-success_time" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[success_time]" type="text" value="{:$row.success_time?datetime($row.success_time):''}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

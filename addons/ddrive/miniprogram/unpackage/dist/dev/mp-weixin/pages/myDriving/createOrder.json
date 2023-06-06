@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "创建订单",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}

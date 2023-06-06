@@ -1,0 +1,1740 @@
+---------------------------------------------------------------
+[ 2023-05-18T13:01:21+08:00 ] 183.225.26.166 GET up.bysooo.com/
+[运行时间：18.070141s] [吞吐率：0.06req/s] [内存消耗：1,478.62kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000071s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.467653s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000092s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000109s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.047497s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.745254s ]
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.021238s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/up.bysooo.com/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:01:21+08:00 ] 183.225.26.166 GET up.bysooo.com/
+[运行时间：4.712848s] [吞吐率：0.21req/s] [内存消耗：751.52kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000063s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.466211s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000102s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000119s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.047483s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.745205s ]
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.020895s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/up.bysooo.com/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:14:33+08:00 ] 183.225.26.166 GET up.bysooo.com/favicon.ico
+[运行时间：0.048671s] [吞吐率：20.55req/s] [内存消耗：327.98kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000088s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000248s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000041s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'http://up.bysooo.com/admin.php',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/avif,image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:14:48+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php
+[运行时间：0.013641s] [吞吐率：73.31req/s] [内存消耗：438.73kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000223s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000032s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000037s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000131s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000142s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:14:50+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/index/login?url=%2Fadmim.php
+[运行时间：0.004694s] [吞吐率：213.04req/s] [内存消耗：472.53kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000058s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000169s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000045s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000104s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000028s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv',
+  'referer' => 'http://up.bysooo.com/admim.php',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admim.php',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000115s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000063s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /www/wwwroot/up.bysooo.com/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000020s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:14:50+08:00 ] 183.225.26.166 GET up.bysooo.com/index.php?s=/captcha
+[运行时间：0.005688s] [吞吐率：175.81req/s] [内存消耗：330.84kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000062s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000161s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/avif,image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /www/wwwroot/up.bysooo.com/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:14:50+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/ajax/lang?callback=define&controllername=index&lang=zh-cn&v=1684386890&v=1684386890
+[运行时间：0.006353s] [吞吐率：157.40req/s] [内存消耗：473.81kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000056s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000174s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000036s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'lang' => 'zh-cn',
+  'v' => '1684386890',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000174s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000042s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/up.bysooo.com/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000028s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:04+08:00 ] 183.225.26.166 POST up.bysooo.com/admim.php/index/login?url=%2Fadmim.php
+[运行时间：0.311591s] [吞吐率：3.21req/s] [内存消耗：757.08kb] [文件加载：145]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000120s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'origin' => 'http://up.bysooo.com',
+  'content-length' => '86',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admim.php',
+  '__token__' => '2ca1bd268579356cbbf4f5d37d167738',
+  'username' => 'admin',
+  'password' => '123456',
+  'captcha' => 'cwqm',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000070s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000039s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /www/wwwroot/up.bysooo.com/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.025157s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:04+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php
+[运行时间：0.087812s] [吞吐率：11.39req/s] [内存消耗：1,022.80kb] [文件加载：154]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000074s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000214s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000037s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000038s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000156s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000055s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /www/wwwroot/up.bysooo.com/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000036s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:04+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/dashboard?addtabs=1
+[运行时间：0.024146s] [吞吐率：41.41req/s] [内存消耗：795.92kb] [文件加载：143]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000059s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000204s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000056s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000069s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000132s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000054s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ /www/wwwroot/up.bysooo.com/application/admin/controller/Dashboard.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/dashboard/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000026s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:05+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/ajax/lang?callback=define&controllername=dashboard&lang=zh-cn&v=1684386904&v=1684386904
+[运行时间：0.003854s] [吞吐率：259.47req/s] [内存消耗：473.46kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000063s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000142s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'lang' => 'zh-cn',
+  'v' => '1684386904',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000187s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000043s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/up.bysooo.com/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000021s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:05+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/ajax/lang?callback=define&controllername=index&lang=zh-cn&v=1684386904&v=1684386904
+[运行时间：0.003859s] [吞吐率：259.13req/s] [内存消耗：474.35kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000142s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000030s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'lang' => 'zh-cn',
+  'v' => '1684386904',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000233s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000111s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/up.bysooo.com/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000060s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:06+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/dashboard/index?addtabs=1
+[运行时间：0.021813s] [吞吐率：45.84req/s] [内存消耗：794.86kb] [文件加载：143]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000058s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000171s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000037s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000027s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-dest' => 'iframe',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000121s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000046s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ /www/wwwroot/up.bysooo.com/application/admin/controller/Dashboard.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/dashboard/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000024s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:06+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/ajax/lang?callback=define&controllername=dashboard&lang=zh-cn&v=1684386905&v=1684386905
+[运行时间：0.003732s] [吞吐率：267.96req/s] [内存消耗：473.82kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000064s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000143s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'script',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'lang' => 'zh-cn',
+  'v' => '1684386905',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000153s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000044s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/up.bysooo.com/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000022s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:10+08:00 ] 183.225.26.166 OPTIONS up.bysooo.com/admim.php/ajax/wipecache?type=addons&_=1684386911742
+[运行时间：0.005374s] [吞吐率：186.08req/s] [内存消耗：438.21kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000059s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000190s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000048s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000040s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'wipecache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'te' => 'trailers',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'origin' => 'http://up.bysooo.com',
+  'access-control-request-headers' => 'x-requested-with',
+  'access-control-request-method' => 'GET',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'addons',
+  '_' => '1684386911742',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000126s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000056s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:13+08:00 ] 183.225.26.166 OPTIONS up.bysooo.com/admim.php/ajax/wipecache?type=all&_=1684386911743
+[运行时间：0.003791s] [吞吐率：263.78req/s] [内存消耗：438.21kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000146s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000027s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'wipecache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'te' => 'trailers',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'origin' => 'http://up.bysooo.com',
+  'access-control-request-headers' => 'x-requested-with',
+  'access-control-request-method' => 'GET',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'all',
+  '_' => '1684386911743',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000121s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000031s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:19+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/addon?addtabs=1
+[运行时间：0.028681s] [吞吐率：34.87req/s] [内存消耗：852.41kb] [文件加载：153]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000177s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000046s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000081s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000039s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-dest' => 'iframe',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000143s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000050s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->index[ /www/wwwroot/up.bysooo.com/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/addon/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000033s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:19+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/ajax/lang?callback=define&controllername=addon&lang=zh-cn&v=1684386919&v=1684386919
+[运行时间：0.003394s] [吞吐率：294.65req/s] [内存消耗：476.03kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000101s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000033s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000021s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'script',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'lang' => 'zh-cn',
+  'v' => '1684386919',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000166s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000040s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/up.bysooo.com/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000025s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:20+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/addon/downloaded?callback=jQuery22408692712170002573_1684386926354&sort=id&order=desc&offset=0&limit=50&filter=%7B%22faversion%22%3A%221.2.0.20201008_beta%22%7D&op=%7B%22faversion%22%3A%22%3D%22%7D&uid=&token=&_=1684386926355
+[运行时间：0.566713s] [吞吐率：1.76req/s] [内存消耗：839.00kb] [文件加载：143]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000134s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000032s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000019s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'downloaded',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/json',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'jQuery22408692712170002573_1684386926354',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '50',
+  'filter' => '{"faversion":"1.2.0.20201008_beta"}',
+  'op' => '{"faversion":"="}',
+  'uid' => '',
+  'token' => '',
+  '_' => '1684386926355',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000056s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000060s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->downloaded[ /www/wwwroot/up.bysooo.com/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000023s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:49+08:00 ] 117.135.171.41 GET up.bysooo.com/admim.php/index/login?url=/admim.php
+[运行时间：0.004575s] [吞吐率：218.58req/s] [内存消耗：470.80kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000158s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000034s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'referer' => 'http://up.bysooo.com/admim.php',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admim.php',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000083s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000050s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /www/wwwroot/up.bysooo.com/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000038s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:15:50+08:00 ] 117.135.171.41 GET up.bysooo.com/index.php?s=/captcha
+[运行时间：0.002632s] [吞吐率：379.92req/s] [内存消耗：327.25kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000138s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000021s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /www/wwwroot/up.bysooo.com/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T13:16:05+08:00 ] 117.135.170.82 GET up.bysooo.com/admim.php/dashboard?addtabs=1
+[运行时间：0.005061s] [吞吐率：197.58req/s] [内存消耗：435.34kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000246s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000035s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000085s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000039s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T15:02:43+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/addon/config?name=ddrive&dialog=1
+[运行时间：0.022686s] [吞吐率：44.08req/s] [内存消耗：835.59kb] [文件加载：144]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000158s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000036s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-dest' => 'iframe',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'ddrive',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000138s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000072s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/up.bysooo.com/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000039s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T15:02:44+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/ajax/lang?callback=define&controllername=addon&lang=zh-cn&v=1684393363&v=1684393363
+[运行时间：0.002911s] [吞吐率：343.54req/s] [内存消耗：476.03kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000120s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000038s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'script',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'lang' => 'zh-cn',
+  'v' => '1684393363',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000100s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000040s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/up.bysooo.com/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000021s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T15:03:04+08:00 ] 183.225.26.166 POST up.bysooo.com/admim.php/addon/config?name=ddrive&dialog=1
+[运行时间：0.226973s] [吞吐率：4.41req/s] [内存消耗：935.35kb] [文件加载：159]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000192s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000050s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000062s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000033s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'origin' => 'https://up.bysooo.com',
+  'content-length' => '5697',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'ddrive',
+  'dialog' => '1',
+  'row' => 
+  array (
+    'wx_appid' => 'wxa7fdd8a22955a7fb',
+    'wx_secret' => '41258ed573bfce101e787fc85179503b',
+    'driver_wx_appid' => 'wx1dc3cc089b330163',
+    'driver_wx_secret' => 'd8c8ba1a647072eeb0a967d3454d9269',
+    'user_wx_appid' => 'wx1dc3cc089b330163',
+    'user_wx_secret' => 'd8c8ba1a647072eeb0a967d3454d9269',
+    'user_alipay_app_id' => '2021001185646266',
+    'user_alipay_ali_public_key' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtb1cIhJWMjvk5nrH6RQuH9gJmhFrAnxkl/lm0tQXrAIFh1iSdcZmVkcpf9K+OE4ioTHwkHys1dMbdGUAJq8AvWAtQ0cmzbJ+34aTmVTSrGpIugXzZB5TMO66BbHLVemlaYePde0IzeUOmr9v2QyW5iY59iKEUXBpG6lknx9sO/3AZFy+3WDDnbBzlrTa3XHVMJhliR5zjT9Q0GTu6t0439ElDpwJdLmASPOdU9gGTvLagg5or2KpA9BENRpCxd5N2N5lZSHcdscxG+eIGyAmYJ0XwvarOQziUV3BPHdCN1Ks1r7w3OrpFbI8paBSDB3y7OOGYjj8DRrLZVZ80mWN0wIDAQAB',
+    'user_alipay_private_key' => 'MIIEowIBAAKCAQEAowsuABiDy6ijaAplvgmcpDQrumUmseZdivZdgMNgXqXIO+mT0eGSQDfc0rx06fZqkDHNIYNaTGKpCfKN2fqS7sjgALYuiBrznKvHkvadcs6YJSp/lkgdXJwzyxO+is4MsBVXID1Ir+wJ3zZqRN2fktro5O6VyJ+oG2YQIFdgm5joC1mt0Nxeg3bXxB4g6GWi+K/7zH57s2HYLTO+Ux7xOrEzCgc7w6kz1DegIsSfbbpMFB+mqUtcY1IJ2lwkICrHuyWGXvUD+RQVP9zAxhCQMZ6gcnzz2gTa9I3F7mAAd4+YJXO8vbqCC3ci0bvbGWxSIkHa/ilCjCRggTg11vBdrQIDAQABAoIBAHQ8SiUjVQJiTWykzPf4XkXqM6qE5ls5wkKJdQuRPij7w46C7TFZwSwrJzDNzgPl+v6lonpb7Io8ZAqFc3+NVicJ6jhXqUC7BiYRiQxK6OCqTGlirOb0rooRihMjFlpan00BScXgKuvQORF697P01AicLCDZvsryl6RA1QpZgLQr3+22goChXnC3TlytFfCvFnNRfkwkj9RGLqw0vw87wx8hbJrW/k4be9JA8EHym4dNWpt93QVNvWhDjojp7bssbWlwNkP/rdN1GcPi5PC9C0dIEZEssox6cbZlLfntbtVUl8tHB1/J1WTTk61ZkNtyfrOJ7+apQlexeChQP3lqQPkCgYEA39T1eComULr9oujdUMWdmNZmmWYtgx0lc3LLrKUdBccW2EjJe6h6XqJXiLPBI12INWhxaPqEVaJdserUjz9JQtSRKjXsmgUiC3HHefthncyCMgkOJ/Q0Y4nckJWw74tdUWU5ArupmKB7G8JYAJw9cI506m8wTMbszosmn4zsmycCgYEAunnAI4I9/5HNn9UyOVaN67jYS6FKNbgpxRgxJj+yBRQWE6IWrWTj+eKWQDSDQ0nBZ0mF+hLg6tIWksIJ4oCAKURaWQDLNkRG0/X33AwxaCyoIr986ZawYQ6U6WMvbdXEgrG6FPsDXyQIxPyUHQBLG/mDY8WuffIU+aau/sTIlQsCgYEArDuVKwLb+tD4LGwdKHL3gsyvpCgwqyw5Ti2uNcnTnEeG96SCjUml573pt0ICQvFMxzP32Hy0aaSHjkkRiKx89hTVIvLdfeKnQMEralyZz6+3G0NGhk3uJg3GD+dvf9PwWZqXFNhMdyo9sK2Jw+Z1jG/B3UbzlpCXVZNThAAPbI8CgYAts7UxfrQvNM7Og3PhtaLmyNDKCGelrtMd6QXyt92rfPbELQ+dw4JUNgJZDgW1shfidpSNa58QLhk2MrQ1fQTsGEKEWbt0O1uYi0oJ9jsNqxQyH/g/T50+zFIWuSZgpumYlnJivfpfkPdNQBIU4YOHAaoAA+z2FSSq4v00l4oJbQKBgAskWMWmw/zHjCCI3YPFZNOoBDZJopnTxrVPTFqJlV9gwcQx7dAqyJXXZrqE1lB4gYPbu/Lc0BywHHkvhOXuaV0ykQw26AztlIHYNUZewfDZVEH2ERAViRiucgkmNTdwPft2aPVDMH1Ux4EqVVfAvIqRsIAu6BKRN78V+3YlXc6d',
+    'mch_id' => '1621729151',
+    'key' => 'c651fcbe10fe8146ed4adfbbd1b377d7',
+    'platform_service_fee' => '30',
+    'restrict_service_fee' => '20000',
+    'withdraw_rate' => '1',
+    'withdraw_min' => '10',
+    'withdraw_max' => '10000',
+    'mileage' => '5',
+    'base_price' => '100',
+    'night_base_price' => '50',
+    'kilometer_price' => '3',
+    'excision_start_time' => '6',
+    'excision_time' => '22',
+    'timeout' => '10',
+    'timeout_price' => '1',
+    'phone' => '010-11111111',
+    'worktime' => '08:00-23:00',
+    'email' => 'test@test.com',
+    'notice' => '<p>1、5年以上驾龄。</p><p>2、熟悉路道。</p><p>3、必须熟练操作手动挡，自动挡。</p><p>4、年龄在25~55之间。</p><p>5、.上岗前24小时严禁饮酒。</p><p>6、微笑上岗、语音、语速清晰;</p><p>7、仪容仪表(佩戴胸卡、着装、头发、指甲干净整洁、勤洗澡不能有异味);</p><p>8、身体状态(不应带病上岗，保证身体状况良好);</p><p>9、不吃有异味的食品，保持口腔清洁;</p><p>代驾员服务中须携带物品</p><p>①驾驶证、工牌、交通卡(方便出行)</p><p>②手机、充电宝(方便与客户联系，保持电量，音量调到合适档)</p><p>③笔、服务确认单、公司名片</p><p>④防雨具(如下雨，请自备2把，把伞撑开递给客户或帮助客户打伞送至车内)</p><p>⑤准备零钱(1元、 21元、41元、61元)</p><p>⑥其它选带用品(湿纸巾、饮用水、手套、塑料袋)</p>',
+    'noticeMobile' => '15096677027,13658836625',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000074s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000050s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/up.bysooo.com/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.032137s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T15:03:07+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/addon/downloaded?callback=jQuery22408692712170002573_1684386926354&sort=id&order=desc&offset=0&limit=50&filter=%7B%22faversion%22%3A%221.2.0.20201008_beta%22%7D&op=%7B%22faversion%22%3A%22%3D%22%7D&uid=&token=&_=1684386926356
+[运行时间：3.021468s] [吞吐率：0.33req/s] [内存消耗：837.92kb] [文件加载：143]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000100s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'downloaded',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/json',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'jQuery22408692712170002573_1684386926354',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '50',
+  'filter' => '{"faversion":"1.2.0.20201008_beta"}',
+  'op' => '{"faversion":"="}',
+  'uid' => '',
+  'token' => '',
+  '_' => '1684386926356',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000089s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000055s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->downloaded[ /www/wwwroot/up.bysooo.com/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000025s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T15:03:10+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/addon/config?name=ddrive&dialog=1
+[运行时间：0.021029s] [吞吐率：47.55req/s] [内存消耗：834.95kb] [文件加载：144]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000151s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000037s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-dest' => 'iframe',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'ddrive',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000061s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000061s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/up.bysooo.com/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000032s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T15:03:11+08:00 ] 183.225.26.166 GET up.bysooo.com/admim.php/ajax/lang?callback=define&controllername=addon&lang=zh-cn&v=1684393390&v=1684393390
+[运行时间：0.002873s] [吞吐率：348.08req/s] [内存消耗：476.03kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000105s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ofqnrg5ne74uld4sl0lrcdm3bv; think_var=zh-cn',
+  'te' => 'trailers',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'script',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'lang' => 'zh-cn',
+  'v' => '1684393390',
+)
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000093s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000040s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/up.bysooo.com/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000017s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T16:43:22+08:00 ] 49.234.35.33 GET up.bysooo.com/admim.php/dashboard?addtabs=1
+[运行时间：0.004420s] [吞吐率：226.24req/s] [内存消耗：407.20kb] [文件加载：129]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000181s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000033s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'en-US,en;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000071s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000051s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T16:43:25+08:00 ] 49.234.35.33 GET up.bysooo.com/admim.php/index/login?url=%2Fadmim.php%2Fdashboard%3Faddtabs%3D1
+[运行时间：0.003119s] [吞吐率：320.62req/s] [内存消耗：438.71kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000113s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000026s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4lsjgjrg1i92j8svhl7005qhui',
+  'accept-language' => 'en-US,en;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://up.bysooo.com/admim.php/dashboard?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admim.php/dashboard?addtabs=1',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000063s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000050s ]
+[ info ] [ RUN ] app\admin\controller\Index->login[ /www/wwwroot/up.bysooo.com/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/up.bysooo.com/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000019s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T16:43:26+08:00 ] 49.234.35.33 GET up.bysooo.com/index.php?s=/captcha
+[运行时间：0.004788s] [吞吐率：208.86req/s] [内存消耗：320.84kb] [文件加载：118]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000156s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000046s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000058s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000038s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4lsjgjrg1i92j8svhl7005qhui',
+  'accept-language' => 'en-US,en;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /www/wwwroot/up.bysooo.com/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-18T16:43:29+08:00 ] 49.234.35.33 GET up.bysooo.com/admim.php/ajax/lang?callback=define&controllername=index&lang=en-us&v=1684399405&v=1684399405
+[运行时间：0.002446s] [吞吐率：408.84req/s] [内存消耗：438.95kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000101s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000018s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4lsjgjrg1i92j8svhl7005qhui',
+  'accept-language' => 'en-US,en;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'lang' => 'en-us',
+  'v' => '1684399405',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000104s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000048s ]
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/up.bysooo.com/application/admin/controller/Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000031s ]
+[ info ] [ LOG ] INIT File

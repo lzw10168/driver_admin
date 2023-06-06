@@ -1,0 +1,96 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Locationname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-locationname" data-rule="required" class="form-control " name="row[locationname]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Detailaddress')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-detailaddress" class="form-control " name="row[detailaddress]" type="text">
+        </div>
+    </div>
+    <div class="form-group" style="width:65%;height:250px;margin:0 auto;">
+        <div class="col-xs-12 col-sm-8" id='allmap' style="width: 100%;height: 100%;overflow: hidden;margin:0;"></div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Search')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="searchaddress" class="form-control " type="text" placeholder="{:__('Search tips')}">
+        </div>
+        <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Longitude')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-longitude" class="form-control " name="row[longitude]" type="text" readonly="readonly">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Latitude')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-latitude" class="form-control " name="row[latitude]" type="text" readonly="readonly">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Phone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-phone" class="form-control " name="row[phone]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Email')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-email" class="form-control " name="row[email]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Fax')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-fax" class="form-control " name="row[fax]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Qq')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-qq" class="form-control " name="row[qq]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Website')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-website" class="form-control " name="row[website]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-picture" class="control-label col-xs-12 col-sm-2">{:__('Picture')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-picture" data-rule="" class="form-control" size="50" name="row[picture]" type="text">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-picture" class="btn btn-danger plupload" data-input-id="c-picture" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-picture"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-picture" class="btn btn-primary fachoose" data-input-id="c-picture" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-picture"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-picture"></ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Province')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-province" class="form-control " name="row[province]" type="text">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+
+</form>
+

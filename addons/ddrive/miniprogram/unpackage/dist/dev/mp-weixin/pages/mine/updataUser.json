@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人资料",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "prompt": "/components/zz-prompt/index"
+  }
+}

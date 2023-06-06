@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+            body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+            #allmap {height: 100%;width:100%;overflow: hidden;}
+            #r-searchresult {width:100%;font-size:12px;}
+            dl,dt,dd,ul,li{
+                margin:0;
+                padding:0;
+                list-style:none;
+            }
+            dt{
+                font-size:14px;
+                font-family:"微软雅黑";
+                font-weight:bold;
+                border-bottom:1px dotted #000;
+                padding:5px 0 5px 5px;
+                margin:5px 0;
+            }
+            dd{
+                padding:5px 0 0 5px;
+            }
+            li{
+                line-height:28px;
+            }
+            .sel_city_sf a {
+                font-size:12px;
+            }
+            .sel_city_name {
+                font-size:12px;
+            }
+            .optionpanel{margin: 10px;position:fixed;right:10px;bottom:10px;font-size:12px;}
+        </style>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak={$config.baiduak}"></script>
+
+        <!--信息窗口库-->
+        <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+        <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+
+        <title>{$site.name}</title>
+    </head>
+    <body>
+        <div id="allmap"></div>
+        <div id="r-result">
+            <div class="optionpanel">
+                <label>选择主题</label>
+                <select id="stylelist" onchange="changeMapStyle(this.value)"></select>
+            </div>
+        </div>
+        <div id="r-position"></div>
+    </body>
+</html>
+<script type="text/javascript" src="http://lbsyun.baidu.com/custom/stylelist.js">
+
+</script>
+<script type="text/javascript">
+
+    function G(id) {
+        return document.getElementById(id);
+    }
+
+    //初始化模板选择的下拉框
+    var sel = document.getElementById('stylelist');
+    for (var key in mapstyles) {
+        var style = mapstyles[key];
+        var item = new Option(style.title, key);
+        sel.options.add(item);
+    }
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point, 10);
+    map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+
+//添加标尺工具
+    var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+    var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+    var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL}); //右上角，仅包含平移和缩放按钮
+    /*缩放控件type有四种类型:
+     BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
+    map.addControl(top_left_control);
+    map.addControl(top_left_navigation);
+//    map.addControl(top_right_navigation);
+
+    //添加地图类型控件
+    var stCtrl = new BMap.MapTypeControl();
+    stCtrl.setOffset(new BMap.Size(20, 30));
+    map.addControl(stCtrl);
+
+    function changeMapStyle(style) {
+        map.setMapStyle({style: style});
+        $('#desc').html(mapstyles[style].desc);
+    }
+
+//添加全景，需要flash支持
+//    map.addTileLayer(new BMap.PanoramaCoverageLayer());
+//    var stCtrl = new BMap.PanoramaControl(); //构造全景控件
+//    stCtrl.setOffset(new BMap.Size(20, 20));
+//    map.addControl(stCtrl);//添加全景控件
+
+//添加版权
+    var cr = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_TOP_RIGHT});   //设置版权控件位置
+    map.addControl(cr); //添加版权控件
+    var bs = map.getBounds();   //返回地图可视区域
+    cr.addCopyright({id: 1, content: "<a href='https://www.fastadmin.net/store/cwmap.html' target='_blank' style='font-size:14px;background:yellow'>" + "{$site.name}" + "</a>", bounds: bs});
+    //Copyright(id,content,bounds)类作为CopyrightControl.addCopyright()方法的参数
+
+    //城市列表控件
+    var size = new BMap.Size(80, 60);
+    map.addControl(new BMap.CityListControl({
+        anchor: BMAP_ANCHOR_TOP_LEFT,
+//        anchor: BMAP_ANCHOR_BOTTOM_LEFT,
+        offset: size,
+        // 切换城市之间事件
+        // onChangeBefore: function(){
+        //    alert('before');
+        // },
+//         切换城市之后事件
+        onChangeAfter: function () {
+            map.setZoom(13);
+        }
+    }));
+
+    var data = {$data};
+    var pointArray = new Array();
+
+    for (var i = 0; i < data.length; i++) {
+        pointArray[i] = new BMap.Point(data[i]['longitude'], data[i]['latitude']);
+        var marker = new BMap.Marker(new BMap.Point(data[i]['longitude'], data[i]['latitude'])); // 创建点
+        map.addOverlay(marker);    //增加点
+        var title = data[i]['locationname'];
+        marker.setLabel(new BMap.Label((i + 1) + ":" + title, {offset: new BMap.Size(20, -10)}));
+        var content = '<div style="margin:0;line-height:20px;padding:2px;">';
+
+        //check picture is null
+        if (data[i]['picture'] != null && data[i]['picture'] != '') {
+            content += '<img src="__CDN__' + data[i]['picture'] + '" id="img' + data[i]['id'] + '" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>';
+        }
+        //check address
+        if (data[i]['detailaddress'] != null && data[i]['detailaddress'] != '') {
+            content += '地址: ' + data[i]['detailaddress'] + '<br/>';
+        }
+        //check phone
+        if (data[i]['phone'] != null && data[i]['phone'] != '') {
+            content += '电话: ' + data[i]['phone'] + '<br/>';
+        }
+        //check email
+        if (data[i]['email'] != null && data[i]['email'] != '') {
+            content += '邮箱: ' + data[i]['email'] + '<br/>';
+        }
+        //check fax
+        if (data[i]['fax'] != null && data[i]['fax'] != '') {
+            content += '传真: ' + data[i]['fax'] + '<br/>';
+        }
+        //check qq
+        if (data[i]['qq'] != null && data[i]['qq'] != '') {
+            content += 'QQ: ' + data[i]['qq'] + '<br/>';
+        }
+        //check website
+        if (data[i]['website'] != null && data[i]['website'] != '') {
+            content += '网址: ' + data[i]['website'] + '<br/>';
+        }
+        content += '</div>';
+        addClickHandler(title, content, marker, "img" + data[i]['id']);
+    }
+
+    //让所有点在视野范围内
+    map.setViewport(pointArray);
+
+    var searchInfoWindow;
+
+    function addClickHandler(title, content, marker, id) {
+        marker.addEventListener("click", function (e) {
+            openInfo(title, content, e);
+        });
+    }
+
+    function openInfo(title, content, e) {
+        var p = e.target;
+        var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+        map.centerAndZoom(point, 14);
+//        changeMapStyle('default')
+//        sel.value = 'default';
+
+//        var opts = {
+//            width: 300, // 信息窗口宽度
+//            height: 105, // 信息窗口高度
+//            title: title, // 信息窗口标题
+//            enableMessage: true//设置允许信息窗发送短息
+//        };
+//        var infoWindow = new BMap.InfoWindow(content, opts);  // 创建信息窗口对象 
+//        map.openInfoWindow(infoWindow, point); //开启信息窗口
+
+        searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title: title, //标题
+            width: 320, //宽度
+            height: 120, //高度
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_SEARCH, //周边检索
+                BMAPLIB_TAB_TO_HERE, //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        searchInfoWindow.open(point);
+    }
+
+</script>

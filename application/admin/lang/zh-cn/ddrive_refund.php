@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'Id'              => 'ID',
+    'User_id'         => '用户ID',
+    'Order_id'        => '订单ID',
+    'Order_number'    => '订单单号',
+    'Number'          => '支付单号',
+    'Refund_number'   => '退款单号',
+    'Account'         => '退款账户',
+    'Pay_type'        => '付款方式',
+    'Pay_type 1'      => '余额支付',
+    'Pay_type 2'      => '微信支付',
+    'Pay_type 3'      => '支付宝付',
+    'Admin_id'        => '后台操作员ID',
+    'Check_status'    => '退款状态',
+    'Check_status 0'  => '已提交',
+    'Check_status 1'  => '已通过',
+    'Check_status 2'  => '退款成功',
+    'Check_status -1' => '已拒绝',
+    'Apply_money'     => '申请退款金额',
+    'Money'           => '实际退还金额',
+    'Apply_time'      => '申请退款时间',
+    'Confirm_time'    => '处理时间',
+    'Success_time'    => '退款成功时间',
+    'User.username'    => '用户名',
+];

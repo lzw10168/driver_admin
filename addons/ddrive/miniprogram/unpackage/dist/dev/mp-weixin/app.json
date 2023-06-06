@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/login/register",
+    "pages/login/forgetThePassword",
+    "pages/taxiService/taxiService",
+    "pages/details/details",
+    "pages/forum/forum",
+    "pages/forum/articleDetails",
+    "pages/forum/addForum",
+    "pages/mine/mine",
+    "pages/mine/updataUser",
+    "pages/mine/order",
+    "pages/mine/applyDriving",
+    "pages/mine/setting",
+    "pages/mine/opinion",
+    "pages/mine/aboutUs",
+    "pages/mine/integral",
+    "pages/mine/myForum",
+    "pages/myDriving/myDriving",
+    "pages/myDriving/drivingDetails",
+    "pages/myDriving/createOrder",
+    "pages/myDriving/order",
+    "pages/myDriving/withdraw",
+    "pages/myDriving/withdraws",
+    "pages/myDriving/recording",
+    "pages/mine/agree"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#999999",
+    "selectedColor": "#32C45E",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/sy.png",
+        "selectedIconPath": "static/sys.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "iconPath": "static/cl.png",
+        "text": "畅聊",
+        "selectedIconPath": "static/cls.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/wd.png",
+        "selectedIconPath": "static/wds.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于展示你所在位置"
+    }
+  },
+  "usingComponents": {}
+}

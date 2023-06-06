@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "同城代驾",
+  "usingComponents": {
+    "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot"
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "同城代驾"
+      }
+    }, {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/login/register",
+      "style": {
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "注册"
+      }
+    },
+    {
+      "path": "pages/login/forgetThePassword",
+      "style": {
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "找回密码"
+      }
+    }, {
+      "path": "pages/taxiService/taxiService",
+      "style": {
+        "navigationBarTitleText": "欢迎使用同城代驾",
+        "navigationBarBackgroundColor": "#FFFFFF"
+		
+      }
+    },{
+      "path": "pages/details/details",
+      "style": {
+        "app-plus": {
+          "titleNView": {
+            "type": "transparent"
+          }
+        }
+      }
+    }, {
+      "path": "pages/forum/forum",
+      "style": {
+        "navigationBarTitleText": "畅聊",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "enablePullDownRefresh": true
+      }
+    }, {
+      "path": "pages/forum/articleDetails",
+      "style": {
+        "navigationBarTitleText": "",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/forum/addForum",
+      "style": {
+        "navigationBarTitleText": "发布话题",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }, {
+      "path": "pages/mine/updataUser",
+      "style": {
+        "navigationBarTitleText": "个人资料",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/mine/order",
+      "style": {
+        "navigationBarTitleText": "我的订单",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/mine/applyDriving",
+      "style": {
+        "navigationBarTitleText": "申请代驾",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/mine/setting",
+      "style": {
+        "navigationBarTitleText": "设置",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/mine/opinion",
+      "style": {
+        "navigationBarTitleText": "意见反馈",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/mine/aboutUs",
+      "style": {
+        "navigationBarTitleText": "关于我们",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/mine/integral",
+      "style": {
+        "navigationBarTitleText": "积分",
+        "navigationBarBackgroundColor": "#32c45e",
+        "enablePullDownRefresh": true
+      }
+    }, {
+      "path": "pages/mine/myForum",
+      "style": {
+        "navigationBarTitleText": "我的畅聊",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "path": "pages/myDriving/myDriving",
+      "style": {
+        "navigationBarTitleText": "我是代驾",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "enablePullDownRefresh": true
+      }
+    }, {
+      "path": "pages/myDriving/drivingDetails",
+      "style": {
+        "navigationBarTitleText": "代驾接单详情",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/myDriving/createOrder",
+      "style": {
+        "navigationBarTitleText": "创建订单",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/myDriving/order",
+      "style": {
+        "navigationBarTitleText": "订单",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/myDriving/withdraw",
+      "style": {
+        "navigationBarTitleText": "余额",
+        "navigationBarBackgroundColor": "#32C45E",
+        "navigationBarTextStyle": "white"
+      }
+    }, {
+      "path": "pages/myDriving/withdraws",
+      "style": {
+        "navigationBarTitleText": "余额提现",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }, {
+      "path": "pages/myDriving/recording",
+      "style": {
+        "navigationBarTitleText": "提现记录",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "enablePullDownRefresh": true
+      }
+    }, {
+      "path": "pages/mine/agree",
+      "style": {
+        "navigationBarTitleText": "用户协议",
+        "navigationBarBackgroundColor": "#FFFFFF"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#999999",
+    "selectedColor": "#32C45E",
+
+    "list": [{
+        "pagePath": "pages/index/index",
+        "iconPath": "static/sy.png",
+        "selectedIconPath": "static/sys.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "iconPath": "static/cl.png",
+        "text": "畅聊",
+        "selectedIconPath": "static/cls.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/wd.png",
+        "selectedIconPath": "static/wds.png",
+        "text": "我的"
+
+      }
+    ]
+  },
+  "condition" : { //模式配置，仅开发期间生效
+    "current": 0, //当前激活的模式(list 的索引项)
+    "list": [
+      {
+        "name": "下单", //模式名称
+        "path": "pages/taxiService/taxiService", //启动页面，必选
+        "query": "action=call" //启动参数，在页面的onLoad函数里面得到
+      },
+      {
+        "name": "申请代驾", //模式名称
+        "path": "pages/mine/applyDriving", //启动页面，必选
+        "query": "" //启动参数，在页面的onLoad函数里面得到
+      }
+    ]
+  }
+}

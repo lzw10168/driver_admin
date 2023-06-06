@@ -1,0 +1,100 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <!--<div class="form-group">-->
+    <!--<label class="control-label col-xs-12 col-sm-2">{:__('Order_id')}:</label>-->
+    <!--<div class="col-xs-12 col-sm-8">-->
+    <!--<input id="c-order_id" data-rule="required" data-source="order/index" class="form-control selectpage" name="row[order_id]" type="text" value="{$row.order_id|htmlentities}">-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="username" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
+        </div>
+    </div>
+    <!--<div class="form-group">-->
+    <!--<label class="control-label col-xs-12 col-sm-2">{:__('Coupon_id')}:</label>-->
+    <!--<div class="col-xs-12 col-sm-8">-->
+    <!--<input id="c-coupon_id" data-rule="required" data-source="coupon/index" class="form-control selectpage" name="row[coupon_id]" type="text" value="{$row.coupon_id|htmlentities}">-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Coupon_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <select  id="c-coupon_type" class="form-control selectpicker" name="row[coupon_type]">
+                {foreach name="couponTypeList" item="vo"}
+                <option value="{$key}" {in name="key" value="$row.coupon_type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Coupon_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <select  id="c-coupon_name" class="form-control selectpicker" name="row[coupon_name]">
+                {foreach name="couponNameList" item="vo"}
+                <option value="{$key}" {in name="key" value="$row.coupon_name"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remark" class="form-control" name="row[remark]" type="text" value="{$row.remark|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Coupon_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-coupon_price" class="form-control" step="0.01" name="row[coupon_price]" type="number" value="{$row.coupon_price|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Limit_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-limit_price" class="form-control" step="0.01" name="row[limit_price]" type="number" value="{$row.limit_price|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Issuance_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-issuance_time" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[issuance_time]" type="text" value="{:$row.issuance_time?datetime($row.issuance_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Expiration')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-expiration" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[expiration]" type="text" value="{:$row.expiration?datetime($row.expiration):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Usage_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-usage_time" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[usage_time]" type="text" value="{:$row.usage_time?datetime($row.usage_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Coupon_status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <div class="radio">
+                {foreach name="couponStatusList" item="vo"}
+                <label for="row[coupon_status]-{$key}"><input id="row[coupon_status]-{$key}" name="row[coupon_status]" type="radio" value="{$key}" {in name="key" value="$row.coupon_status"}checked{/in} /> {$vo}</label>
+                {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

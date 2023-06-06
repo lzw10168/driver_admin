@@ -1,0 +1,1 @@
+<view class="index"><view class="m_list"><block wx:for="{{list.data}}" wx:for-item="v" wx:for-index="i" wx:key="i"><view class="item"><view class="top"><text>微信提现</text><view class="right"><text>{{v.money}}</text>元</view></view><view class="bottom"><text>{{v.createdate}}</text></view></view></block></view></view>

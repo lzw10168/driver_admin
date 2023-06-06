@@ -1,0 +1,70 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Coupon_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-coupon_type" class="form-control selectpicker" name="row[coupon_type]">
+                {foreach name="couponTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value=""}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Coupon_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-coupon_name" class="form-control selectpicker" name="row[coupon_name]">
+
+                    <option value="2">福利券</option>
+
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-remark" class="form-control " rows="5" name="row[remark]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Coupon_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-coupon_price" class="form-control" step="0.01" name="row[coupon_price]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Limit_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-limit_price" class="form-control" step="0.01" name="row[limit_price]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Expiration')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-expiration" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[expiration]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Coupon_status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            {foreach name="couponStatusList" item="vo"}
+            <label for="row[coupon_status]-{$key}"><input id="row[coupon_status]-{$key}" name="row[coupon_status]" type="radio" value="{$key}" {in name="key" value="1"}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

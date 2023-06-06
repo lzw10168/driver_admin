@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "代驾接单详情",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "tki-qrcode": "/components/tki-qrcode/tki-qrcode"
+  }
+}

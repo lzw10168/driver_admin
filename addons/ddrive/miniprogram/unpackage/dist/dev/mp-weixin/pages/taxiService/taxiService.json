@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "欢迎使用同城代驾",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "my-issue": "/components/myIssue"
+  }
+}

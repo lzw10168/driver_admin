@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.empty.data-v-f3a8f504 {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+page.data-v-f3a8f504,
+.index.data-v-f3a8f504 {
+  height: 100%;
+  background-color: #fbfbfb;
+}
+.center.data-v-f3a8f504 {
+  padding: 30rpx;
+}
+.center1.data-v-f3a8f504 {
+  padding: 30rpx;
+  font-size: 26rpx;
+  line-height: 48rpx;
+}
+.top.data-v-f3a8f504 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 20rpx;
+  font-size: 28rpx;
+  background-color: #ffffff;
+}
+.top .active.data-v-f3a8f504 {
+  color: #32c45e;
+}
+.top .t1.data-v-f3a8f504 {
+  width: 48%;
+  text-align: center;
+}
+.top .t2.data-v-f3a8f504 {
+  width: 48%;
+  text-align: center;
+}
+.top .icon.data-v-f3a8f504 {
+  font-size: 30rpx;
+}
+.orders.data-v-f3a8f504 {
+  margin-bottom: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 20rpx 10rpx;
+  padding-right: 20rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  -webkit-box-shadow: 1px 1px 1px 1px #eaeaea;
+          box-shadow: 1px 1px 1px 1px #eaeaea;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  background-color: #ffffff;
+}
+.orders .icon.data-v-f3a8f504 {
+  text-align: center;
+  font-size: 56rpx;
+}
+.orders .left.data-v-f3a8f504 {
+  width: 80%;
+}
+.orders .left .input.data-v-f3a8f504 {
+  width: 100%;
+  padding: 6rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.orders .left .input text.data-v-f3a8f504 {
+  width: 20%;
+}
+.orders .left .input .time.data-v-f3a8f504 {
+  width: 70%;
+  font-size: 25rpx;
+  color: #979797;
+}
+.orders .left .input .address.data-v-f3a8f504 {
+  width: 70%;
+  font-size: 26rpx;
+}
+.orders .right.data-v-f3a8f504 {
+  width: 20%;
+  text-align: right;
+  font-size: 34rpx;
+  color: #e51c23;
+}
+.orders .right button.data-v-f3a8f504 {
+  float: right;
+  width: 140rpx;
+  background-color: #32c45e;
+  margin-top: 20rpx;
+  -webkit-border-radius: 50rpx;
+          border-radius: 50rpx;
+  padding: 0 10rpx;
+  font-size: 22rpx;
+}
+.orders .right .price.data-v-f3a8f504 {
+  float: right;
+  position: relative;
+  right: 20rpx;
+  font-size: 28rpx;
+  width: 250rpx;
+}
+.bottom.data-v-f3a8f504 {
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 120rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.bottom .item.data-v-f3a8f504 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 24rpx;
+  width: 33.33%;
+}
+.bottom .item .icon.data-v-f3a8f504 {
+  font-size: 56rpx;
+  color: #999999;
+}
+.active.data-v-f3a8f504 {
+  color: #32c45e !important;
+}
+.active .icon.data-v-f3a8f504 {
+  color: #32c45e !important;
+}
+

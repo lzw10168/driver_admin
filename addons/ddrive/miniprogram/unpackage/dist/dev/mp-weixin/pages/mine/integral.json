@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "积分",
+  "navigationBarBackgroundColor": "#32c45e",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}

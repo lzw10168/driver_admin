@@ -1,0 +1,1123 @@
+---------------------------------------------------------------
+[ 2023-05-13T19:25:13+08:00 ] 183.225.26.121 GET up.bysooo.com/addons/ddrive/freight/carInfo
+[运行时间：0.860211s] [吞吐率：1.16req/s] [内存消耗：1,475.11kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000124s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000045s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000056s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'freight',
+  'action' => 'carInfo',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000151s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:13+08:00 ] 183.225.26.121 GET up.bysooo.com/addons/ddrive/sforder/index_order
+[运行时间：0.913964s] [吞吐率：1.09req/s] [内存消耗：1,764.06kb] [文件加载：143]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000066s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000142s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000048s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000060s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000032s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'sforder',
+  'action' => 'index_order',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000183s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:13+08:00 ] 183.225.26.121 GET up.bysooo.com/addons/ddrive/freight/car_name
+[运行时间：0.871185s] [吞吐率：1.15req/s] [内存消耗：1,246.65kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000058s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000155s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000037s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'freight',
+  'action' => 'car_name',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000157s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:13+08:00 ] 183.225.26.121 GET up.bysooo.com/addons/ddrive/banner/market_setting
+[运行时间：2.183601s] [吞吐率：0.46req/s] [内存消耗：1,985.33kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000065s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.029990s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000064s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000080s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.012952s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'banner',
+  'action' => 'market_setting',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.055978s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:13+08:00 ] 183.225.26.121 GET up.bysooo.com/addons/ddrive/sforder/recommend_route
+[运行时间：0.906615s] [吞吐率：1.10req/s] [内存消耗：2,080.21kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000121s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000026s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'sforder',
+  'action' => 'recommend_route',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000148s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:14+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.230353s] [吞吐率：4.34req/s] [内存消耗：793.68kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000069s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000141s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000037s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000031s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000160s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:17+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.033095s] [吞吐率：30.22req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000056s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000210s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000037s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000044s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000215s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:20+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.030975s] [吞吐率：32.28req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000116s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000142s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000029s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000160s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:23+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.033159s] [吞吐率：30.16req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000060s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000186s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000042s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000191s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:26+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.031379s] [吞吐率：31.87req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000062s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000208s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000039s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000251s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000173s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:29+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.033055s] [吞吐率：30.25req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000076s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000230s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000037s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000081s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000184s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:32+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.032045s] [吞吐率：31.21req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000107s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000136s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000042s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000042s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000286s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:35+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.032921s] [吞吐率：30.38req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000184s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000034s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000041s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000191s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:38+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.031705s] [吞吐率：31.54req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000060s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000163s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000037s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000030s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000157s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:41+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.031655s] [吞吐率：31.59req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000153s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000035s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000105s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:44+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.030590s] [吞吐率：32.69req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000158s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000086s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:47+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.032488s] [吞吐率：30.78req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000159s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000037s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000036s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000105s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:50+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.032312s] [吞吐率：30.95req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000113s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000057s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000069s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000021s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000112s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:53+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.032737s] [吞吐率：30.55req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000156s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000035s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000111s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:56+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.031475s] [吞吐率：31.77req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000108s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000084s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:25:59+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.032296s] [吞吐率：30.96req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000156s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000035s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000035s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000134s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:26:02+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.028715s] [吞吐率：34.83req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000112s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000088s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:26:05+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.032566s] [吞吐率：30.71req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000195s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000047s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000059s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000048s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000172s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-05-13T19:26:08+08:00 ] 183.225.26.121 POST up.bysooo.com/addons/ddrive/order/order_taking
+[运行时间：0.030926s] [吞吐率：32.34req/s] [内存消耗：727.99kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000062s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.000140s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000036s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000035s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx1dc3cc089b330163/devtools/page-frame.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => '22a3ca8e-90e0-42ae-9a80-945e93d02c73',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1 wechatdevtools/1.06.2303220 MicroMessenger/8.0.5 webview/',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'up.bysooo.com',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'ddrive',
+  'controller' => 'order',
+  'action' => 'order_taking',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/up.bysooo.com/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000171s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/up.bysooo.com/public/../application/admin/lang/zh-cn/ddrive/order.php
+[ info ] [ LOG ] INIT File

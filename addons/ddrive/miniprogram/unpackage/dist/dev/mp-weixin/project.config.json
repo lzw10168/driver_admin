@@ -1,0 +1,42 @@
+{
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wx67b24edcbe18ae39",
+  "projectname": "designatedDriver",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "下单",
+          "query": "action=call",
+          "id": 0,
+          "pathName": "pages/taxiService/taxiService"
+        },
+        {
+          "name": "申请代驾",
+          "query": "",
+          "id": 1,
+          "pathName": "pages/mine/applyDriving"
+        }
+      ]
+    }
+  }
+}

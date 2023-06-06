@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'Order_id'        => '订单id',
+    'User_id'         => '用户id',
+    'Coupon_id'       => '优惠券id',
+    'Coupon_name'     => '券名称',
+    'Remark'          => '备注',
+    'Coupon_price'    => '金额',
+    'Limit_price'     => '最低限额',
+    'Issuance_time'   => '发放时间',
+    'Expiration'      => '过期时间',
+    'Usage_time'      => '使用时间',
+    'Coupon_status'   => '状态',
+    'Coupon_status 0' => '待使用',
+    'Coupon_status 1' => '已使用',
+    'Coupon_status 2' => '已过期',
+    'Createtime'      => '创建时间',
+    'User.nickname'   => '昵称',
+    'Coupon_type'     => '券类型',
+    'Coupon_type 1'   => '代驾券',
+    'Coupon_type 2'   => '拼车券',
+    'Coupon_type 3'   => '货运券',
+    'Coupon_name'     => '券名称',
+    'Coupon_name 1'   => '新手券',
+    'Coupon_name 2'   => '福利券',
+];

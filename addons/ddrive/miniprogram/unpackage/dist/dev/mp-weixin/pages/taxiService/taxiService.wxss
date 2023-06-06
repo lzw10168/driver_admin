@@ -1,0 +1,449 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+input.data-v-37fb4976 {
+  font-size: 26rpx;
+}
+.icon.data-v-37fb4976 {
+  font-size: 56rpx;
+}
+.map.data-v-37fb4976 {
+  width: 100%;
+  height: calc(100vh - 400rpx);
+}
+.call.data-v-37fb4976 {
+  padding: 30rpx;
+}
+.taxi.data-v-37fb4976 {
+  width: 100%;
+  height: 400rpx;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background-color: #ffffff;
+}
+.taxi .input.data-v-37fb4976 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 90%;
+  padding: 20rpx 0;
+}
+.taxi .input text.data-v-37fb4976 {
+  width: 10%;
+}
+.taxi .input input.data-v-37fb4976 {
+  width: 60%;
+}
+.taxi .input button.data-v-37fb4976 {
+  font-size: 26rpx;
+  background-color: #ffffff;
+  color: #333333;
+  float: right;
+}
+.tips .item.data-v-37fb4976 {
+  font-size: 28rpx;
+  color: #000000;
+}
+.popup.data-v-37fb4976 {
+  height: 100%;
+}
+.popup .destination.data-v-37fb4976 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 10rpx 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.popup .destination text.data-v-37fb4976 {
+  font-size: 28rpx;
+  color: #d2d2d2;
+}
+.popup .addressHistory.data-v-37fb4976 {
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  font-size: 24rpx;
+  color: #d2d2d2;
+}
+.popup .addressHistory text.data-v-37fb4976 {
+  color: #101010;
+  font-size: 28rpx;
+}
+.theFare.data-v-37fb4976 {
+  width: 100%;
+  height: 100%;
+}
+.theFare .money.data-v-37fb4976 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 22rpx;
+  height: 234rpx;
+  color: #d2d2d2;
+}
+.theFare .money text.data-v-37fb4976 {
+  margin-bottom: 10rpx;
+  color: #101010;
+  font-size: 38rpx;
+  font-weight: 800;
+}
+.theFare .xiadan.data-v-37fb4976 {
+  width: 100%;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  background-color: #32c45e;
+  border: none;
+  position: absolute;
+  bottom: 0;
+}
+.theFare .xiadan.data-v-37fb4976:after {
+  border: none;
+}
+.order.data-v-37fb4976 {
+  width: 100%;
+  height: 100%;
+}
+.order .cancel.data-v-37fb4976 {
+  font-size: 28rpx;
+  text-align: right;
+  width: 95%;
+}
+.order .cancel .text.data-v-37fb4976 {
+  padding-top: 10px;
+  display: inline-block;
+}
+.order .money.data-v-37fb4976 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 22rpx;
+  height: 200rpx;
+  color: #d2d2d2;
+}
+.order .money text.data-v-37fb4976 {
+  margin-bottom: 10rpx;
+  color: #101010;
+  font-size: 38rpx;
+  font-weight: 800;
+}
+.order .xiadan.data-v-37fb4976 {
+  width: 100%;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  background-color: #e1e1e1;
+  position: absolute;
+  bottom: 0;
+  color: #999999;
+}
+.order .xiadan.data-v-37fb4976:after {
+  border: none;
+}
+.new.data-v-37fb4976 {
+  width: 100%;
+  height: 100%;
+}
+.new .cancel.data-v-37fb4976 {
+  font-size: 28rpx;
+  text-align: right;
+  width: 95%;
+}
+.new .cancel .text.data-v-37fb4976 {
+  padding-top: 10px;
+  display: inline-block;
+}
+.new .user.data-v-37fb4976 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 28rpx;
+}
+.new .user .icon.data-v-37fb4976 {
+  font-size: 28rpx;
+}
+.new .user image.data-v-37fb4976 {
+  width: 80rpx;
+  height: 80rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.new .user .name.data-v-37fb4976 {
+  width: 40%;
+  margin-left: 20rpx;
+}
+.new .user .name .item2.data-v-37fb4976 {
+  font-size: 24rpx;
+  padding-left: 20rpx;
+}
+.new .user .phone.data-v-37fb4976 {
+  width: 40%;
+  text-align: right;
+}
+.new .money.data-v-37fb4976 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 22rpx;
+  height: 200rpx;
+  color: #d2d2d2;
+}
+.new .money text.data-v-37fb4976 {
+  margin-bottom: 10rpx;
+  color: #101010;
+  font-size: 38rpx;
+  font-weight: 800;
+}
+.new .xiadan.data-v-37fb4976 {
+  width: 100%;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  background-color: #e1e1e1;
+  position: absolute;
+  bottom: 0;
+  color: #999999;
+}
+.new .xiadan.data-v-37fb4976:after {
+  border: none;
+}
+.payment.data-v-37fb4976 {
+  height: 100%;
+}
+.payment .user.data-v-37fb4976 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 28rpx;
+  padding: 20rpx;
+}
+.payment .user image.data-v-37fb4976 {
+  width: 80rpx;
+  height: 80rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.payment .user .name.data-v-37fb4976 {
+  width: 40%;
+  margin-left: 20rpx;
+}
+.payment .user .name .item2.data-v-37fb4976 {
+  font-size: 24rpx;
+  padding-left: 20rpx;
+}
+.payment .user .phone.data-v-37fb4976 {
+  width: 40%;
+  text-align: right;
+}
+.payment .user .icon.data-v-37fb4976 {
+  font-size: 28rpx;
+}
+.payment .money.data-v-37fb4976 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  font-size: 22rpx;
+  height: 100rpx;
+  color: #d2d2d2;
+  padding: 20rpx;
+}
+.payment .money text.data-v-37fb4976 {
+  width: 45%;
+  margin-bottom: 10rpx;
+  color: #101010;
+  font-size: 30rpx;
+}
+.payment .xiadan.data-v-37fb4976 {
+  width: 100%;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  background-color: #32c45e;
+  position: absolute;
+  bottom: 0;
+}
+.payment .xiadan.data-v-37fb4976:after {
+  border: none;
+}
+.cancel-text.data-v-37fb4976 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 16px;
+  color: red;
+}
+.comment.data-v-37fb4976 {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.comment .user.data-v-37fb4976 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 28rpx;
+}
+.comment .user image.data-v-37fb4976 {
+  width: 80rpx;
+  height: 80rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.comment .user .name.data-v-37fb4976 {
+  width: 40%;
+  margin-left: 20rpx;
+}
+.comment .user .name .item2.data-v-37fb4976 {
+  font-size: 20rpx;
+  padding-left: 20rpx;
+}
+.comment .user .phone.data-v-37fb4976 {
+  width: 40%;
+  text-align: right;
+}
+.comment .money.data-v-37fb4976 {
+  text-align: center;
+  padding-top: 40rpx;
+  height: 120rpx;
+  font-size: 28rpx;
+}
+.comment .money text.data-v-37fb4976 {
+  margin-bottom: 10rpx;
+  color: #101010;
+  font-size: 30rpx;
+}
+.comment .comment-btn.data-v-37fb4976 {
+  width: 100%;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  background-color: #32c45e;
+  height: 90rpx;
+  color: #ffffff;
+  border-top: 1px solid #dddddd;
+  position: absolute;
+  bottom: 0;
+}
+.comment .comment-btn.data-v-37fb4976:after {
+  border: none;
+}
+.comment .done.data-v-37fb4976 {
+  height: 90rpx;
+  width: 100%;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  background-color: #32c45e;
+  color: #ffffff;
+  border-top: 1px solid #dddddd;
+  position: absolute;
+  bottom: 0;
+}
+.comment .done.data-v-37fb4976:after {
+  border: none;
+}
+
