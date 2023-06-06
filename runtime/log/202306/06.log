@@ -23091,3 +23091,292 @@
 [ info ] [ RUN ] app\admin\controller\CardVerified->index[ /www/wwwroot/website.lovexy.life/application/admin/controller/CardVerified.php ]
 [ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000016s ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-06-06T15:41:35+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.070796s] [吞吐率：14.13req/s] [内存消耗：3,439.34kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000276s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.003096s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000097s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000132s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.001148s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.test.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001683s ]
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000331s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-06-06T15:42:00+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.037515s] [吞吐率：26.66req/s] [内存消耗：3,082.01kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.002729s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000100s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000117s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000286s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.test.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001102s ]
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000221s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-06-06T15:42:08+08:00 ] 127.0.0.1 GET www.test.com/admim.php
+[运行时间：0.037382s] [吞吐率：26.75req/s] [内存消耗：3,311.12kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.002339s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000088s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000100s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000216s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.test.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001298s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000426s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-06-06T15:42:10+08:00 ] 127.0.0.1 GET www.test.com/admim.php/index/login?url=%2Fadmim.php
+[运行时间：0.043467s] [吞吐率：23.01req/s] [内存消耗：3,629.51kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.002301s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000083s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000098s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000251s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=gn3d4o3lkv3rlsvne8nhotoi7g',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/admim.php',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.test.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admim.php',
+)
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001310s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000207s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000228s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-06-06T15:42:10+08:00 ] 127.0.0.1 GET www.test.com/index.php?s=/captcha
+[运行时间：0.029908s] [吞吐率：33.44req/s] [内存消耗：2,384.92kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.002932s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000128s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000146s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000345s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=gn3d4o3lkv3rlsvne8nhotoi7g',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.test.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-06-06T15:42:10+08:00 ] 127.0.0.1 GET www.test.com/admim.php/ajax/lang?callback=define&controllername=index&lang=zh-cn&v=1686037330&v=1686037330
+[运行时间：0.036357s] [吞吐率：27.50req/s] [内存消耗：3,500.41kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\crontab\Crontab @app_init [ RunTime:0.002581s ]
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.000096s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000112s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000270s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=gn3d4o3lkv3rlsvne8nhotoi7g',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.test.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'lang' => 'zh-cn',
+  'v' => '1686037330',
+)
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001451s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\nkeditor\Nkeditor @config_init [ RunTime:0.000274s ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\Users\zhiwei.li\Downloads\website.lovexy.life_R5TGxk\website.lovexy.life\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000178s ]
+[ info ] [ LOG ] INIT File

@@ -46,30 +46,54 @@ class DriverUser extends Backend
 
     public function index()
     {
-        //设置过滤方法
+        // 过滤请求参数中的 HTML 标签和空格，并把它们作为筛选条件
         $this->request->filter(['strip_tags', 'trim']);
+
+        // 判断是否是 AJAX 请求
         if ($this->request->isAjax()) {
-            //如果发送的来源是Selectpage，则转发到Selectpage
+            // 如果请求中包含名为 keyField 的参数，则说明该请求是从 Selectpage 页面发送的，因此需要跳转到 Selectpage 页面处理
             if ($this->request->request('keyField')) {
                 return $this->selectpage();
             }
+            
+            // 解析请求参数，包括筛选条件、排序方式、分页和每页数量等
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
+            $search = $this->request->param('search');
+
+            // 构造额外的筛选条件，只查询 driver_verified 表中 status 字段为 1 的记录
             $where2 = [];
             $where2['driver_verified.status'] = '1';
+            
+            // 在user表中模糊查询 username 和 mobile 字段
+            if (!empty($search)) {
+                $where2['user.username|user.mobile'] = ['like', '%' . $search . '%'];
+            }
+            // 剔除where中的search
+            unset($where['search']);
+            // 打印where
+            dump($where);
+            
+            // 使用 with 方法关联 user 表，查询满足 where 条件和 where2 条件的数据并按照 sort 和 order 排序，分页查询 limit 条数据
             $list = $this->model
                 ->with(['user'])
                 ->where($where)
                 ->where($where2)
                 ->order($sort, $order)
                 ->paginate($limit);
+            
+            // 对查询结果进行遍历，只返回关联表 user 中的 username 和 mobile 字段数据
             foreach ($list as $row) {
                 $row->getRelation('user')->visible(['username', 'mobile']);
             }
+            
+            // 组合查询结果并以 JSON 格式返回
             $result = ["total" => $list->total(), "rows" => $list->items()];
-
             return json($result);
         }
+
+        // 如果不是 AJAX 请求，则渲染视图并返回
         return $this->view->fetch();
+
     }
 
 
