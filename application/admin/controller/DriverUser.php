@@ -57,22 +57,11 @@ class DriverUser extends Backend
             }
             
             // 解析请求参数，包括筛选条件、排序方式、分页和每页数量等
-            list($where, $sort, $order, $offset, $limit) = $this->buildparams();
-            $search = $this->request->param('search');
-
+            list( $sort, $order, $offset, $limit) = $this->buildparams();
             // 构造额外的筛选条件，只查询 driver_verified 表中 status 字段为 1 的记录
             $where2 = [];
             $where2['driver_verified.status'] = '1';
-            
-            // 在user表中模糊查询 username 和 mobile 字段
-            if (!empty($search)) {
-                $where2['user.username|user.mobile'] = ['like', '%' . $search . '%'];
-            }
-            // 剔除where中的search
-            unset($where['search']);
-            // 打印where
-            dump($where);
-            
+            // 打印$where
             // 使用 with 方法关联 user 表，查询满足 where 条件和 where2 条件的数据并按照 sort 和 order 排序，分页查询 limit 条数据
             $list = $this->model
                 ->with(['user'])
