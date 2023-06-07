@@ -160,3 +160,83 @@
         </div>
     </div>
 </form>
+
+<script type="text/javascript" >
+    // [
+    //     'name' => 'mileage',
+    //     'title' => '起步里程/km',
+    //     'type' => 'number',
+    //     'value' => '7',
+    //     'rule' => 'required',
+    //     'msg' => '',
+    //     'tip' => '例：填写7表示7公里内只收取当前时段基础价',
+    // ],
+    // [
+    //     'name' => 'base_price',
+    //     'title' => '白天基础价/元',
+    //     'type' => 'number',
+    //     'value' => '30',
+    //     'rule' => 'required',
+    //     'msg' => '',
+    //     'tip' => '白天基础价',
+    // ],
+    // [
+    //     'name' => 'night_base_price',
+    //     'title' => '夜晚基础价/元',
+    //     'type' => 'number',
+    //     'content' => [],
+    //     'value' => '40',
+    //     'rule' => 'required',
+    //     'msg' => '',
+    //     'tip' => '夜晚基础价',
+    // ],
+    // [
+    //     'name' => 'kilometer_price',
+    //     'title' => '每公里价格/元',
+    //     'type' => 'number',
+    //     'value' => '5',
+    //     'rule' => 'required',
+    //     'msg' => '',
+    //     'tip' => '超出基础价外每公里费用',
+    // ],
+    // [
+    //     'name' => 'excision_start_time',
+    //     'title' => '白天夜晚分割开始时间/时',
+    //     'type' => 'number',
+    //     'value' => '7',
+    //     'rule' => 'required',
+    //     'msg' => '',
+    //     'tip' => '填写7表示07点后以白天基础价为准',
+    // ],
+    // [
+    //     'name' => 'excision_time',
+    //     'title' => '白天夜晚分割结束时间/时',
+    //     'type' => 'number',
+    //     'value' => '24',
+    //     'rule' => 'required',
+    //     'msg' => '',
+    //     'tip' => '填写22表示22点前以白天基础价为准',
+    // ],
+    
+    const mileage = 7;
+    const base_price = 30;
+    const night_base_price = 40;
+    const kilometer_price = 5;
+    const excision_start_time = 7;
+    const excision_time = 24;
+    const c_distance = $('#c-distance');
+    const c_estimated_price = $('#c-estimated_price');
+    // 当#c-distance内容发生变化时，计算#c-estimated_price 的值, 根据上面规则计算
+    c_distance.on('change', function () {
+        const distance = $(this).val();
+        // 判断当前时间是在晚上还是白天
+        const now = new Date();
+        const hour = now.getHours();
+        const is_light = hour >= excision_start_time && hour < excision_time;
+        // 计算价格
+        const acturl_base_price = is_light ? base_price : night_base_price;
+        const price = distance <= mileage ? acturl_base_price : (distance <= mileage ? acturl_base_price : (distance - mileage) * kilometer_price + acturl_base_price);
+        c_estimated_price.val(price);
+    });
+
+</script>
