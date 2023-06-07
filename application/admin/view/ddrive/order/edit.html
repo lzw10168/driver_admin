@@ -1,162 +1,261 @@
 <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-user_id" data-rule="required" disabled="disabled" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
-        </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-user_id" data-rule="required" disabled="disabled" data-source="user/user/index" data-field="nickname"
+        class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Driver_id')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-driver_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[driver_id]" type="text" value="{$row.driver_id|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Driver_id')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-driver_id" data-rule="required" data-source="driver_user/getList" data-field="username"
+        class="form-control selectpage" name="row[driver_id]" type="text" value="{$row.driver_id|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
-        <div class="col-xs-12 col-sm-8">
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+    <div class="col-xs-12 col-sm-8">
 
-                <div class="radio">
-                    {foreach name="typeList" item="vo"}
-                    <label for="row[status]-{$key}"><input id="row[type]-{$key}" name="row[type]" type="radio" value="{$key}" {in name="key" value="$row.type"}checked{/in} /> {$vo}</label>
-                    {/foreach}
-                </div>
+      <div class="radio">
+        {foreach name="typeList" item="vo"}
+        <label for="row[status]-{$key}"><input id="row[type]-{$key}" name="row[type]" type="radio" value="{$key}" {in
+            name="key" value="$row.type" }checked{/in} /> {$vo}</label>
+        {/foreach}
+      </div>
 
-        </div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Appointment_time')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-appointment_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true"  name="row[appointment_time]" type="text" value="{$row.appointment_time|datetime}">
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Appointment_time')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-appointment_time" data-rule="required" class="form-control datetimepicker"
+        data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[appointment_time]" type="text"
+        value="{$row.appointment_time|datetime}">
 
 
-        </div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Start_city')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <div class='control-relative'><input id="c-start_city" data-rule="required" class="form-control" name="row[start_city]" type="text" value="{$row.start_city|htmlentities}"></div>
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Start_city')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <div class='control-relative'><input id="c-start_city" data-rule="required" class="form-control"
+          name="row[start_city]" type="text" value="{$row.start_city|htmlentities}"></div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Start')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-start" data-rule="required" class="form-control" name="row[start]" type="text" value="{$row.start|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Start')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-start" data-rule="required" class="form-control" name="row[start]" type="text"
+        value="{$row.start|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Map')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <span id ="start" class="btn btn-success" data-toggle="addresspicker">选择地图出发详细位置</span>
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Map')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <span id="start" class="btn btn-success" data-toggle="addresspicker">选择地图出发详细位置</span>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Start_address')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-start_address" data-rule="required" class="form-control" name="row[start_address]" type="text" value="{$row.start_address|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Start_address')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-start_address" data-rule="required" class="form-control" name="row[start_address]" type="text"
+        value="{$row.start_address|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Start_latitude')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-start_latitude" data-rule="required" class="form-control" name="row[start_latitude]" type="text" value="{$row.start_latitude|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Start_latitude')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-start_latitude" data-rule="required" class="form-control" name="row[start_latitude]" type="text"
+        value="{$row.start_latitude|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Start_longitude')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-start_longitude" data-rule="required" class="form-control" name="row[start_longitude]" type="text" value="{$row.start_longitude|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Start_longitude')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-start_longitude" data-rule="required" class="form-control" name="row[start_longitude]" type="text"
+        value="{$row.start_longitude|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('End')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-end" data-rule="required" class="form-control" name="row[end]" type="text" value="{$row.end|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('End')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-end" data-rule="required" class="form-control" name="row[end]" type="text"
+        value="{$row.end|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('End_city')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <div class='control-relative'><input id="c-end_city" data-rule="required" class="form-control" name="row[end_city]" type="text" value="{$row.end_city|htmlentities}"></div>
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('End_city')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <div class='control-relative'><input id="c-end_city" data-rule="required" class="form-control"
+          name="row[end_city]" type="text" value="{$row.end_city|htmlentities}"></div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Map')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <span id="end" class="btn btn-success" data-toggle="addresspicker">选择地图目的地地址</span>
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Map')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <span id="end" class="btn btn-success" data-toggle="addresspicker">选择地图目的地地址</span>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('End_address')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-end_address" data-rule="required" class="form-control" name="row[end_address]" type="text" value="{$row.end_address|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('End_address')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-end_address" data-rule="required" class="form-control" name="row[end_address]" type="text"
+        value="{$row.end_address|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('End_latitude')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-end_latitude" data-rule="required" class="form-control" name="row[end_latitude]" type="text" value="{$row.end_latitude|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('End_latitude')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-end_latitude" data-rule="required" class="form-control" name="row[end_latitude]" type="text"
+        value="{$row.end_latitude|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('End_longitude')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-end_longitude" data-rule="required" class="form-control" name="row[end_longitude]" type="text" value="{$row.end_longitude|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('End_longitude')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-end_longitude" data-rule="required" class="form-control" name="row[end_longitude]" type="text"
+        value="{$row.end_longitude|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Distance')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-distance" class="form-control" step="0.01" name="row[distance]" type="number" value="{$row.distance|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Distance')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-distance" class="form-control" step="0.01" name="row[distance]" type="number"
+        value="{$row.distance|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Duration')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-duration" class="form-control" step="0.01" name="row[duration]" type="number" value="{$row.duration|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Duration')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-duration" class="form-control" step="0.01" name="row[duration]" type="number"
+        value="{$row.duration|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Estimated_price')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-estimated_price" class="form-control" step="0.01" name="row[estimated_price]" type="number" value="{$row.estimated_price|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Estimated_price')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-estimated_price" class="form-control" step="0.01" name="row[estimated_price]" type="number"
+        value="{$row.estimated_price|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Price')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-price" class="form-control" step="0.01" name="row[price]" type="number" value="{$row.price|htmlentities}">
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Price')}:</label>
+    <div class="col-xs-12 col-sm-8">
+      <input id="c-price" class="form-control" step="0.01" name="row[price]" type="number"
+        value="{$row.price|htmlentities}">
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            
-            <div class="radio">
-            {foreach name="statusList" item="vo"}
-            <label for="row[status]-{$key}"><input id="row[status]-{$key}" name="row[status]" type="radio" value="{$key}" {in name="key" value="$row.status"}checked{/in} /> {$vo}</label> 
-            {/foreach}
-            </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+    <div class="col-xs-12 col-sm-8">
 
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Comment')}:</label>
-        <div class="col-xs-12 col-sm-8">
-                        
-            <select  id="c-comment" data-rule="required" class="form-control selectpicker" name="row[comment]">
-                {foreach name="commentList" item="vo"}
-                    <option value="{$key}" {in name="key" value="$row.comment"}selected{/in}>{$vo}</option>
-                {/foreach}
-            </select>
+      <div class="radio">
+        {foreach name="statusList" item="vo"}
+        <label for="row[status]-{$key}"><input id="row[status]-{$key}" name="row[status]" type="radio" value="{$key}"
+            {in name="key" value="$row.status" }checked{/in} /> {$vo}</label>
+        {/foreach}
+      </div>
 
-        </div>
     </div>
-    <div class="form-group layer-footer">
-        <label class="control-label col-xs-12 col-sm-2"></label>
-        <div class="col-xs-12 col-sm-8">
-            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
-            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
-        </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Comment')}:</label>
+    <div class="col-xs-12 col-sm-8">
+
+      <select id="c-comment" data-rule="required" class="form-control selectpicker" name="row[comment]">
+        {foreach name="commentList" item="vo"}
+        <option value="{$key}" {in name="key" value="$row.comment" }selected{/in}>{$vo}</option>
+        {/foreach}
+      </select>
+
     </div>
+  </div>
+  <div class="form-group layer-footer">
+    <label class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+      <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+      <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+    </div>
+  </div>
 </form>
+<script type="text/javascript">
+  // [
+  //     'name' => 'mileage',
+  //     'title' => '起步里程/km',
+  //     'type' => 'number',
+  //     'value' => '7',
+  //     'rule' => 'required',
+  //     'msg' => '',
+  //     'tip' => '例：填写7表示7公里内只收取当前时段基础价',
+  // ],
+  // [
+  //     'name' => 'base_price',
+  //     'title' => '白天基础价/元',
+  //     'type' => 'number',
+  //     'value' => '30',
+  //     'rule' => 'required',
+  //     'msg' => '',
+  //     'tip' => '白天基础价',
+  // ],
+  // [
+  //     'name' => 'night_base_price',
+  //     'title' => '夜晚基础价/元',
+  //     'type' => 'number',
+  //     'content' => [],
+  //     'value' => '40',
+  //     'rule' => 'required',
+  //     'msg' => '',
+  //     'tip' => '夜晚基础价',
+  // ],
+  // [
+  //     'name' => 'kilometer_price',
+  //     'title' => '每公里价格/元',
+  //     'type' => 'number',
+  //     'value' => '5',
+  //     'rule' => 'required',
+  //     'msg' => '',
+  //     'tip' => '超出基础价外每公里费用',
+  // ],
+  // [
+  //     'name' => 'excision_start_time',
+  //     'title' => '白天夜晚分割开始时间/时',
+  //     'type' => 'number',
+  //     'value' => '7',
+  //     'rule' => 'required',
+  //     'msg' => '',
+  //     'tip' => '填写7表示07点后以白天基础价为准',
+  // ],
+  // [
+  //     'name' => 'excision_time',
+  //     'title' => '白天夜晚分割结束时间/时',
+  //     'type' => 'number',
+  //     'value' => '24',
+  //     'rule' => 'required',
+  //     'msg' => '',
+  //     'tip' => '填写22表示22点前以白天基础价为准',
+  // ],
+
+  const mileage = 7;
+  const base_price = 30;
+  const night_base_price = 40;
+  const kilometer_price = 5;
+  const excision_start_time = 7;
+  const excision_time = 24;
+  const c_distance = $('#c-distance');
+  const c_estimated_price = $('#c-estimated_price');
+  // 当#c-distance内容发生变化时，计算#c-estimated_price 的值, 根据上面规则计算
+  c_distance.on('change', function () {
+    const distance = $(this).val();
+    // 判断当前时间是在晚上还是白天
+    const now = new Date();
+    const hour = now.getHours();
+    const is_light = hour >= excision_start_time && hour < excision_time;
+    // 计算价格
+    const acturl_base_price = is_light ? base_price : night_base_price;
+    const price = distance <= mileage ? acturl_base_price : (distance <= mileage ? acturl_base_price : (distance - mileage) * kilometer_price + acturl_base_price);
+    c_estimated_price.val(price);
+  });
+
+</script>
