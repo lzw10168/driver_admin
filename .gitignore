@@ -1,2 +1,2 @@
-runtime/temp/*
-runtime/cache/*
+/runtime/temp/*
+/runtime/cache/*
