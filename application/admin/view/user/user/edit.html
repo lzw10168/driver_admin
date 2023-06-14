@@ -25,16 +25,16 @@
             <input id="c-money" data-rule="required" class="form-control" name="row[money]" type="text" value="{$row.money|htmlentities}">
         </div>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="c-nickname" class="control-label col-xs-12 col-sm-2">{:__('Platform_service_fee')}:</label>
         <div class="col-xs-12 col-sm-4">
             <input id="c-platform_service_fee" data-rule="required" class="form-control" name="row[platform_service_fee]" type="text" value="{$row.platform_service_fee|htmlentities}">
         </div>
-    </div>
+    </div> -->
     <div class="form-group">
         <label for="c-password" class="control-label col-xs-12 col-sm-2">{:__('Password')}:</label>
         <div class="col-xs-12 col-sm-4">
-            <input id="c-password" data-rule="password" class="form-control" name="row[password]" type="text" value="" placeholder="{:__('Leave password blank if dont want to change')}" autocomplete="new-password" />
+            <input id="c-password" data-rule="password"   class="form-control" name="row[password]" type="text" value="" placeholder="{:__('Leave password blank if dont want to change')}" autocomplete="new-password" />
         </div>
     </div>
     <!--<div class="form-group">-->
@@ -46,7 +46,7 @@
     <div class="form-group">
         <label for="c-mobile" class="control-label col-xs-12 col-sm-2">{:__('Mobile')}:</label>
         <div class="col-xs-12 col-sm-4">
-            <input id="c-mobile" data-rule="" class="form-control" name="row[mobile]" type="text" value="{$row.mobile|htmlentities}">
+            <input id="c-mobile" data-rule="" class="form-control"  data-rule="required" name="row[mobile]" type="text" value="{$row.mobile|htmlentities}">
         </div>
     </div>
     <!--<div class="form-group">-->

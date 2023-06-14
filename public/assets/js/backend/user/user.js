@@ -26,12 +26,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {checkbox: true},
                         {field: 'id', title: __('Id'), sortable: true},
                         // {field: 'group.name', title: __('Group')},
-                        //{field: 'username', title: __('Username'), operate: 'LIKE'},
+                        {field: 'username', title: __('Username'), operate: 'LIKE'},
                         {field: 'nickname', title: __('Nickname'), operate: 'LIKE'},
                         // {field: 'email', title: __('Email'), operate: 'LIKE'},
                         {field: 'mobile', title: __('Mobile'), operate: 'LIKE'},
                         {field: 'money', title: __('Money'), operate: 'LIKE'},
-                        {field: 'platform_service_fee', title: __('Platform_service_fee'), operate: 'LIKE'},
+                        // {field: 'platform_service_fee', title: __('Platform_service_fee'), operate: 'LIKE'},
                         // {field: 'avatar', title: __('Avatar'), events: Table.api.events.image, formatter: Table.api.formatter.image, operate: false},
                         // {field: 'level', title: __('Level'), operate: 'BETWEEN', sortable: true},
                         {field: 'gender', title: __('Gender'), visible: false, searchList: {1: __('Male'), 0: __('Female')}},
@@ -58,7 +58,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Table.api.bindevent(table);
         },
         add: function () {
-            Controller.api.bindevent();
+            Controller.api.bindevent($("form[role=form]"));
         },
         edit: function () {
             Controller.api.bindevent();
