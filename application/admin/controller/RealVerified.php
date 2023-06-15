@@ -84,9 +84,9 @@ class RealVerified extends Backend
         }
         if ($this->request->isPost()) {
             $params = $this->request->post("row/a");
-            if($row['status'] == 1){
-                $this->error('当前状态无法操作');
-            }
+            // if($row['status'] == 1){
+            //     $this->error('当前状态无法操作');
+            // }
             if ($params) {
                 $params = $this->preExcludeFields($params);
                 $result = false;

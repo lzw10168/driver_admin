@@ -34,6 +34,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'province', title: __('Province')},
                         {field: 'city', title: __('City')},
                         {field: 'area', title: __('Area')},
+                        {field: 'driver_age', title: '驾龄'},
                         {field: 'driver_license', title: __('Driver_license'), operate: 'LIKE'},
                         {field: 'driver_front_image', title: __('Driver_front_image'), operate: false, events: Table.api.events.image, formatter: Table.api.formatter.image},
                         {field: 'driver_back_image', title: __('Driver_back_image'), operate: false, events: Table.api.events.image, formatter: Table.api.formatter.image},

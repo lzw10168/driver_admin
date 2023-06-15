@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__cash` (
 CREATE TABLE IF NOT EXISTS  `__PREFIX__details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL COMMENT '用户id',
-  `fluctuate_type` tinyint(2) NOT NULL DEFAULT '1' COMMENT '变动类型:1=增加,2减少',
+  `fluctuate_type` tinyint(2) NOT NULL DEFAULT '1' COMMENT '变动类型:1=增加,2=减少',
   `msg` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '变动说明',
   `amount` int(10) DEFAULT NULL COMMENT '变动金额',
   `assets_type` tinyint(1) DEFAULT '1' COMMENT '资产类型:1=提现,2=接单',
@@ -207,6 +207,8 @@ CREATE TABLE IF NOT EXISTS  `__PREFIX__driver_verified` (
   `city` int(10) NOT NULL COMMENT '市',
   `area` int(10) NOT NULL COMMENT '区',
   `driver_license` varchar(50) NOT NULL COMMENT '驾驶证',
+    -- 驾龄
+  `driving_age` varchar(150) DEFAULT NULL COMMENT '驾龄',
   `driver_front_image` varchar(150) NOT NULL COMMENT '驾驶证主页',
   `driver_back_image` varchar(150) NOT NULL COMMENT '驾驶证副页',
   `status` enum('-1','0','1') NOT NULL DEFAULT '0' COMMENT '审核状态:-1=拒绝,0=待审核,1=已认证',

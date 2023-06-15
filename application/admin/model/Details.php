@@ -75,6 +75,7 @@ class Details extends Model
         $data = [
             'user_id' => $user_id,
             'fluctuate_type' => $fluctuate_type,
+            'fluctuate_type_text' => $fluctuate_type == 1 ? '增加' : '减少',
             'msg' => $msg,
             'amount' => $money,
             'assets_type' => $assets_type,

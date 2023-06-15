@@ -27,7 +27,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {checkbox: true},
                         {field: 'id', title: __('Id')},
                         {field: 'user_id', title: __('User_id')},
-                        {field: 'fluctuate_type', title: __('Fluctuate_type'), searchList: {"1":__('Fluctuate_type 1')}, formatter: Table.api.formatter.normal},
+                        {field: 'fluctuate_type', title: __('Fluctuate_type'), searchList: {"1":__('Fluctuate_type 1'), "2":__('Fluctuate_type 2')}, formatter: Table.api.formatter.normal},
                         {field: 'msg', title: __('Msg'), operate: 'LIKE'},
                         {field: 'amount', title: __('Amount')},
                         {field: 'assets_type', title: __('Assets_type'), searchList: {"1":__('Assets_type 1'),"2":__('Assets_type 2')}, formatter: Table.api.formatter.normal},

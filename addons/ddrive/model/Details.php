@@ -34,7 +34,7 @@ class Details extends Model
     
     public function getFluctuateTypeList()
     {
-        return ['1' => __('Fluctuate_type 1')];
+        return ['1' => __('Fluctuate_type 1'), '2' => __('Fluctuate_type 2')];
     }
 
     public function getAssetsTypeList()
@@ -75,6 +75,7 @@ class Details extends Model
         $data = [
             'user_id' => $user_id,
             'fluctuate_type' => $fluctuate_type,
+            'fluctuate_type_text' => $fluctuate_type == 1 ? '增加' : '减少',
             'msg' => $msg,
             'amount' => $money,
             'assets_type' => $assets_type,

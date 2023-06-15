@@ -113,6 +113,11 @@
         text-overflow: ellipsis;
         display: inline-block;
     }
+    .title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
 
     .stat .value {
         font-size: 20px;
@@ -176,8 +181,9 @@
                         <div class="sm-st clearfix">
                             <span class="sm-st-icon st-red"><i class="fa fa-users"></i></span>
                             <div class="sm-st-info">
-                                <span>{$totaluser}</span>
-                                {:__('Total user')}
+                                <span>{$totalorder}</span>
+                                总订单量
+                                <!-- {:__('Total user')} -->
                             </div>
                         </div>
                     </div>
@@ -185,8 +191,9 @@
                         <div class="sm-st clearfix">
                             <span class="sm-st-icon st-violet"><i class="fa fa-book"></i></span>
                             <div class="sm-st-info">
-                                <span>{$totalviews}</span>
-                                {:__('Total view')}
+                                <span>{$totalmoney}</span>
+                                司机余额
+                                <!-- {:__('Total view')} -->
                             </div>
                         </div>
                     </div>
@@ -194,8 +201,9 @@
                         <div class="sm-st clearfix">
                             <span class="sm-st-icon st-blue"><i class="fa fa-shopping-bag"></i></span>
                             <div class="sm-st-info">
-                                <span>{$totalorder}</span>
-                                {:__('Total order')}
+                                <span>{$todayorderamount}</span>
+                                <!-- {:__('Total order')} -->
+                                今日平台收入
                             </div>
                         </div>
                     </div>
@@ -204,75 +212,100 @@
                             <span class="sm-st-icon st-green"><i class="fa fa-cny"></i></span>
                             <div class="sm-st-info">
                                 <span>{$totalorderamount}</span>
-                                {:__('Total order amount')}
+                                <!-- {:__('Total order amount')} -->
+                                平台累计收入
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-8">
+                    <!-- <div class="col-lg-8">
                         <div id="echart" class="btn-refresh" style="height:200px;width:100%;"></div>
-                    </div>
-                    <div class="col-lg-4">
+                    </div> -->
+                    <div class="col-lg-5">
                         <div class="card sameheight-item stats">
                             <div class="card-block">
+                              <div class="title">
+                                今日订单数据
+                              </div>
                                 <div class="row row-sm stats-container">
-                                    <div class="col-xs-6 stat-col">
-                                        <div class="stat-icon"><i class="fa fa-rocket"></i></div>
+                                    <div class="col-xs-4 stat-col">
+                                        <!-- <div class="stat-icon"><i class="fa fa-rocket"></i></div> -->
                                         <div class="stat">
-                                            <div class="value"> {$todayusersignup}</div>
-                                            <div class="name"> {:__('Today user signup')}</div>
+                                            <div class="value"> {$todayorder}</div>
+                                            <div class="name"> 发单量(单)</div>
+                                            
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 30%"></div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6 stat-col">
-                                        <div class="stat-icon"><i class="fa fa-shopping-cart"></i></div>
+                                    <div class="col-xs-4 stat-col">
+                                        <!-- <div class="stat-icon"><i class="fa fa-shopping-cart"></i></div> -->
                                         <div class="stat">
-                                            <div class="value"> {$todayuserlogin}</div>
-                                            <div class="name"> {:__('Today user login')}</div>
+                                            <div class="value"> {$todayongoingorder}</div>
+                                            <div class="name"> 正在进行订单(单)</div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6  stat-col">
-                                        <div class="stat-icon"><i class="fa fa-line-chart"></i></div>
+                                    <div class="col-xs-4  stat-col">
+                                        <!-- <div class="stat-icon"><i class="fa fa-line-chart"></i></div> -->
                                         <div class="stat">
-                                            <div class="value"> {$todayorder}</div>
-                                            <div class="name"> {:__('Today order')}</div>
+                                            <div class="value"> {$todayfinishorder}</div>
+                                            <div class="name"> 完单量(单)</div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6  stat-col">
-                                        <div class="stat-icon"><i class="fa fa-users"></i></div>
+                                    <div class="col-xs-4  stat-col">
+                                        <!-- <div class="stat-icon"><i class="fa fa-users"></i></div> -->
                                         <div class="stat">
-                                            <div class="value"> {$unsettleorder}</div>
-                                            <div class="name"> {:__('Unsettle order')}</div>
+                                            <div class="value"> {$todayorderamount}</div>
+                                            <div class="name"> 支付金额(元)</div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6  stat-col">
-                                        <div class="stat-icon"><i class="fa fa-list-alt"></i></div>
+                                    <div class="col-xs-4  stat-col">
+                                        <!-- <div class="stat-icon"><i class="fa fa-list-alt"></i></div> -->
                                         <div class="stat">
-                                            <div class="value"> {$sevendnu}</div>
-                                            <div class="name"> {:__('Seven dnu')}</div>
+                                            <div class="value"> {$todaymsgfee}</div>
+                                            <div class="name"> 信息费(元)</div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6 stat-col">
-                                        <div class="stat-icon"><i class="fa fa-dollar"></i></div>
+                                    <div class="col-xs-4 stat-col">
+                                        <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
                                         <div class="stat">
-                                            <div class="value"> {$sevendau}</div>
-                                            <div class="name"> {:__('Seven dau')}</div>
+                                            <div class="value"> {$todayinsurefee}</div>
+                                            <div class="name"> 保险费(元)</div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 stat-col">
+                                        <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                                        <div class="stat">
+                                            <div class="value"> {$todayorderavgduration}</div>
+                                            <div class="name"> 平均时长(分钟)</div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 stat-col">
+                                        <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                                        <div class="stat">
+                                            <div class="value"> {$todayorderavgdistance}</div>
+                                            <div class="name"> 平均里程(公里)</div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
@@ -387,10 +420,10 @@
 </div>
 <!--@formatter:off-->
 <script>
-    var Orderdata = {
-        column: {:json_encode(array_keys($paylist))},
-        paydata: {:json_encode(array_values($paylist))},
-        createdata: {:json_encode(array_values($createlist))},
-    };
+    // var Orderdata = {
+    //     column: {:json_encode(array_keys($paylist))},
+    //     paydata: {:json_encode(array_values($paylist))},
+    //     createdata: {:json_encode(array_values($createlist))},
+    // };
 </script>
 <!--@formatter:on-->

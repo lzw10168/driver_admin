@@ -98,9 +98,9 @@ class CarUser extends Backend
                 $result = false;
                 Db::startTrans();
                 try {
-                    if($row['status'] == 1 || $row['status'] == -11){
-                        $this->error('当前状态无法操作');
-                    }
+                    // if($row['status'] == 1 || $row['status'] == -1){
+                    //     $this->error('当前状态无法操作');
+                    // }
                     //是否采用模型验证
                     if ($this->modelValidate) {
                         $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));

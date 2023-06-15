@@ -67,6 +67,7 @@ class DriverUser extends Backend
                 ->with(['user'])
                 // 从user表中取出username和mobile 匹配$search
                 ->where('user.username|user.mobile', 'like', '%' . $search . '%')
+                // ->where($where)
                 ->where($where2)
                 ->order($sort, $order)
                 ->paginate($limit);
@@ -74,6 +75,15 @@ class DriverUser extends Backend
             foreach ($list as $row) {
                 $row->getRelation('user')->visible(['username', 'mobile', 'longitude', 'latitude']);
             }
+            // 再通过user_id去driver_status表中取出driver_status, driver_create_status
+            foreach ($list as $key => $value) {
+              $driver_status = Db::name('driver_status')->where('user_id', $value['user_id'])->find();
+              // 日志中打印
+              if ($driver_status) {
+                $list[$key]['driver_status'] = $driver_status['status'];
+                $list[$key]['driver_create_status'] = $driver_status['create_status'];
+              }
+          }
             $result = ["total" => $list->total(), "rows" => $list->items()];
 
             return json($result);
@@ -82,53 +92,7 @@ class DriverUser extends Backend
     }
 
 
-    function distance($lat1, $lon1, $lat2, $lon2, $unit = 'km', $decimal = 2) {
-      $theta = $lon1 - $lon2;
-      $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-      $dist = acos($dist);
-      $dist = rad2deg($dist);
-      $miles = $dist * 60 * 1.1515;
-      $unit = strtolower($unit);
-      if ($unit == "km") {
-          return round($miles * 1.609344, $decimal);
-      } else if ($unit == "nautical miles") {
-          return round($miles * 0.8684, $decimal);
-      } else {
-          return round($miles, $decimal);
-      }
-  }
     
-    // 获取最近的20个司机
-    public function getNearbyDriver()
-    {
-
-      $longitude = $this->request->request('longitude');
-      $latitude = $this->request->request('latitude');
-      $where = [];
-      $where['driver_verified.status'] = '1';
-      $list = $this->model
-          ->with(['user'])
-          ->where($where)
-          ->select();
-      $result = [];
-      foreach ($list as $row) {
-          $row->getRelation('user')->visible(['username', 'mobile', 'longitude', 'latitude']);
-          $distance = $this->distance($latitude, $longitude, $row->user->latitude, $row->user->longitude);
-          $row->distance = $distance;
-          $result[] = $row;
-      }
-      //  按照距离排序
-      // 自定义排序算法
-
-
-// 使用usort()函数进行排序
-      usort($result, function ($a, $b) {
-        return $a['distance'] - $b['distance'];
-      });
-      $result = array_slice($result, 0, 20);
-      return json($result);
-    }
-
     /**
      * 批量操作
      * @param string $ids
@@ -156,9 +120,6 @@ class DriverUser extends Backend
 
     public function getList()
     {
-        $params = $this->request->request('params');
-        parse_str($params, $paramsArr);
-        Log::write($paramsArr);
         //设置过滤方法
         $this->request->filter(['strip_tags', 'trim']);
 
@@ -169,13 +130,19 @@ class DriverUser extends Backend
             $order = 'desc';
             $limit = 10;
             // 从post请求单独取search参数
-            
-
-            $where2['driver_verified.status'] = '1';
+            $where2 = [];
+            $search = $this->request->request('username');
+            $no_page = $this->request->request('no_page');
+            // 如果no_page, 就不分页
+            if ($no_page) {
+                $limit = 1000000;
+            }
+            $where2['driver_verified.status'] = '1'; // 已认证
+            // 还需要从driver_status表中过滤
             $list = $this->model
                 ->with(['user'])
                 // 从user表中取出username和mobile 匹配$search
-                // ->where('user.username|user.mobile', 'like', '%' . $search . '%')
+                ->where('user.username|user.mobile', 'like', '%' . $search . '%')
                 ->where($where2)
                 ->order($sort, $order)
                 ->paginate($limit);
@@ -190,6 +157,15 @@ class DriverUser extends Backend
                 // 把id 换成user_id
                 $list[$key]['id'] = $list[$key]['user_id'];
             }
+            // 再通过user_id去driver_status表中取出driver_status, driver_create_status
+            foreach ($list as $key => $value) {
+                $driver_status = Db::name('driver_status')->where('user_id', $value['user_id'])->find();
+                if ($driver_status) {
+                  $list[$key]['driver_status'] = $driver_status['status'];
+                  $list[$key]['driver_create_status'] = $driver_status['create_status'];
+                }
+            }
+
             $result = ["total" => $list->total(), "list" => $list->items()];
 
             return json($result);

@@ -60,10 +60,10 @@ class Order extends Model
 
     public function user()
     {
-        return $this->belongsTo('\\app\\admin\\model\\User', 'user_id', 'id', [], 'LEFT')->field('avatar,mobile,group_id,id,username,nickname,email,prevtime,logintime,jointime')->setEagerlyType(0);
+        return $this->belongsTo('\\app\\admin\\model\\User', 'user_id', 'id', [], 'LEFT')->field('avatar,mobile,group_id,id,username,nickname,email,prevtime,logintime,jointime,score')->setEagerlyType(0);
     }
     public function driver()
     {
-        return $this->belongsTo('\\app\\admin\\model\\User', 'driver_id', 'id', [], 'LEFT')->field('avatar,mobile,group_id,id,username,nickname,email,prevtime,logintime,jointime')->setEagerlyType(0);
+        return $this->belongsTo('\\app\\admin\\model\\User', 'driver_id', 'id', [], 'LEFT')->field('avatar,mobile,group_id,id,username,nickname,email,prevtime,logintime,jointime,score')->setEagerlyType(0);
     }
 }

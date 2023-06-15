@@ -4,6 +4,7 @@ return [
     'User_id'          => '用户id',
     'Fluctuate_type'   => '变动类型',
     'Fluctuate_type 1' => '增加',
+    'Fluctuate_type 2' => '减少',
     'Msg'              => '变动说明',
     'Amount'           => '变动金额',
     'Assets_type'      => '资产类型',

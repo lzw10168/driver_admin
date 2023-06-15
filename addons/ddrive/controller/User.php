@@ -38,6 +38,7 @@ class User extends Api
     public function _initialize()
     {
         parent::_initialize();
+        $this->driverVerifiedModel = new \app\admin\model\DriverVerified();
         Lang::load(APP_PATH . 'api/lang/zh-cn/user.php');
     }
 
@@ -191,6 +192,14 @@ class User extends Api
         $nickname = $this->request->request('nickname');
         $bio      = $this->request->request('bio');
         $avatar   = $this->request->request('avatar', '', 'trim,strip_tags,htmlspecialchars');
+        // 经纬度
+        $longitude = $this->request->request('longitude');
+        $latitude  = $this->request->request('latitude');
+
+        if ($longitude && $latitude) {
+            $user->longitude = $longitude;
+            $user->latitude  = $latitude;
+        }
         if ($nickname) {
             $user->nickname = $nickname;
         }
@@ -368,6 +377,7 @@ class User extends Api
         $number_plate       = $this->request->param('number_plate');
         $card_front_image   = $this->request->param('card_front_image');
         $card_back_image    = $this->request->param('card_back_image');
+        $driver_age         = $this->request->param('driver_age');
         $user_verified      = Db::name('user_verified')->where('user_id', $this->auth->id)->find();
         Db::startTrans();
         try {
@@ -463,7 +473,7 @@ class User extends Api
                 if ($user_verified['driver_verified'] != 1 || $user_verified['real_verified'] != 1) {
                     exception('请先实名认证或者驾照认证');
                 }
-                if (!$sign_areas || !$areas || !$card_brand || !$number_plate || !$card_front_image || !$card_back_image) {
+                if (!$sign_areas || !$areas || !$card_brand || !$number_plate || !$card_front_image || !$card_back_image || !$driver_age) {
                     exception(__('Invalid parameters'));
                 }
                 $sign_areas = Db::name('areas')->where(['id' => $sign_areas])->find();
@@ -496,6 +506,7 @@ class User extends Api
                         'number_plate'     => $number_plate,
                         'card_front_image' => $card_front_image,
                         'card_back_image'  => $card_back_image,
+                        'driver_age'       => $driver_age,
                     ];
                     CardVerified::update($data);
                 } else {
@@ -511,6 +522,7 @@ class User extends Api
                         'number_plate'     => $number_plate,
                         'card_front_image' => $card_front_image,
                         'card_back_image'  => $card_back_image,
+                        'driver_age'       => $driver_age,
                     ];
                     CardVerified::create($data);
                 }
@@ -671,13 +683,21 @@ class User extends Api
     public function assets()
     {
         $source_type = $this->request->param('source_type');
+        $asset_id   = $this->request->param('asset_id');
+        $page       = $this->request->param('page', 1);
         $where       = [];
+
+        if ($asset_id) {
+            $where['id'] = $asset_id;
+        }
+
         if ($source_type) {
             $where['source_type'] = $source_type;
         }
         $result = Db::name('details')
             ->where($where)
             ->where('user_id', $this->auth->id)
+            ->page($page, 10)
             ->order('createtime desc')
             ->select();
         foreach ($result as $k => $v) {
@@ -777,7 +797,7 @@ class User extends Api
         if ($user['platform_service_fee'] > 0) {
             if ($type == 1) {
                 if ($user['money'] < $user['platform_service_fee']) {
-                    $this->error('余额不足');
+                    $this->error('余额不足, 请联系客服充值');
                 }
                 try {
                     Db::name('user')->where('id', $this->auth->id)->setDec('money', $user['platform_service_fee']);
@@ -1100,10 +1120,111 @@ class User extends Api
             Db::name('driver_status')->insert([
                 'user_id'    => $this->auth->id,
                 'status'     => $status,
+                'creating'   => 0,
                 'createtime' => time(),
             ]);
         }
         $this->success('成功');
     }
+    // 司机正在创建订单状态
+    public function driver_creating_status()
+    {
+        $status = $this->request->param('status', 1);
+        if (!in_array($status, [0, 1])) {
+            $this->error('参数错误');
+        }
+        $driver_status = Db::name('driver_status')->where('user_id', $this->auth->id)->find();
+        if ($driver_status) {
+            Db::name('driver_status')->where('user_id', $this->auth->id)->setField('creating', $status);
+            Db::name('driver_status')->where('user_id', $this->auth->id)->setField('createtime', time());
+        } else {
+            Db::name('driver_status')->insert([
+                'user_id'    => $this->auth->id,
+                'status'     => 0,
+                'creating'   => $status,
+                'createtime' => time(),
+            ]);
+        }
+        $this->success('成功');
+    }
+
+    function distance($lat1, $lon1, $lat2, $lon2, $unit = 'km', $decimal = 2) {
+      $theta = $lon1 - $lon2;
+      $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+      $dist = acos($dist);
+      $dist = rad2deg($dist);
+      $miles = $dist * 60 * 1.1515;
+      $unit = strtolower($unit);
+      if ($unit == "km") {
+          return round($miles * 1.609344, $decimal);
+      } else if ($unit == "nautical miles") {
+          return round($miles * 0.8684, $decimal);
+      } else {
+          return round($miles, $decimal);
+      }
+  }
+    // 获取最近的多少个司机
+    public function getNearbyDriver()
+    {
+
+      $longitude = $this->request->request('longitude');
+      $latitude = $this->request->request('latitude');
+      $num = $this->request->request('num', 20);
+      $where = [];
+      $where['driver_verified.status'] = '1';
+      // 输出到日志
+      // Log::write(Db::name('driver_verified'));
+      $list = $this->driverVerifiedModel
+          ->with(['user'])
+          ->where($where)
+          ->select();
+      $result = [];
+      foreach ($list as $row) {
+          $row->getRelation('user')->visible(['username', 'mobile', 'longitude', 'latitude', 'avatar']);
+          $distance = $this->distance($latitude, $longitude, $row->user->latitude, $row->user->longitude);
+          $row->distance = $distance;
+          // 把->user
+          $result[] = $row;
+      }
+      //  按照距离排序
+      // 自定义排序算法
+
+
+// 使用usort()函数进行排序
+      usort($result, function ($a, $b) {
+        return $a['distance'] - $b['distance'];
+      });
+      // 再通过user_id去driver_status表中取出driver_status, driver_create_status
+      foreach ($list as $key => $value) {
+          $driver_status = Db::name('driver_status')->where('user_id', $value['user_id'])->find();
+          // 再去real_verifiyed 取出turename
+          $real_verified = Db::name('real_verified')->where('user_id', $value['user_id'])->find();
+          if ($real_verified) {
+            $list[$key]['truename'] = $real_verified['truename'];
+          }
+          // 从card_verified 取出驾龄
+          $card_verified = Db::name('driver_verified')->where('user_id', $value['user_id'])->find();
+          if ($card_verified) {
+            $list[$key]['driver_age'] = $card_verified['driver_age'];
+          }
+          if ($driver_status) {
+            $list[$key]['driver_status'] = $driver_status['status'];
+            $list[$key]['driver_create_status'] = $driver_status['create_status'];
+          }
+          // 从订单表中取出订单数
+          $order_count = Db::name('ddrive_order')->where('driver_id', $value['user_id'])->count();
+          $list[$key]['order_count'] = $order_count;
+          // 把user展开放到外面
+          $list[$key]['username'] = $value['user']['username'];
+          $list[$key]['mobile'] = $value['user']['mobile'];
+          $list[$key]['longitude'] = $value['user']['longitude'];
+          $list[$key]['latitude'] = $value['user']['latitude'];
+
+      }
+      $result = array_slice($result, 0, $num );
+      $this->success('成功', $result);
+      
+    }
+
 
 }

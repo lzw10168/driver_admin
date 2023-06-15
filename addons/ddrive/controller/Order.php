@@ -18,6 +18,8 @@ use Yansongda\Pay\Pay;
 use addons\ddrive\model\User;
 use addons\ddrive\model\UserVerified;
 use addons\ddrive\model\DdriveOrderComment;
+// DriverVerified
+use addons\ddrive\model\DriverVerified;
 
 
 
@@ -68,28 +70,60 @@ class Order extends Api
     {
         $model    = $this->model;
         $pageSize = $this->request->param('pageSize', 10);
+        $page = $this->request->request('page', 1);
+        $start_date = $this->request->param('start_date', '');
+        $end_date = $this->request->param('end_date', '');
+        $status = $this->request->param('status', '');
         $map      = [];
         if (!$this->auth->id) {
             $this->success("", ['date' => []]);
         }
 
         // 订单类型
+
+        if ($start_date && $end_date) {
+          // 转成时间戳, 创建时间或者结束时间
+          $start_date = strtotime($start_date);
+          $end_date = strtotime($end_date) + 86400;
+
+          $map['createtime'] = ['between', [$start_date, $end_date]];
+        }
+        if ($status) {
+          $map['status'] = $status;
+        }
         if ($this->request->has('order_type')) {
             $map['driver_id'] = $this->auth->id;
+            
             if ($this->request->request('order_type') == 1) {
-                $map['status'] = ['in', [1, 2, 4]];//进行中
+                $map['status'] = ['in', [1, 2, 4, 3]];//进行中
                 $list_start    = $model->where($map)->order('createtime desc')->select();
 
                 $map['status'] = ['in', [5]];//已接单
 
                 $list_receiving = $model->where($map)->order('createtime desc')->select();
                 $list           = array_merge($list_start, $list_receiving);
+                
                 $this->success("查询成功", ['data' => $list]);
-            } elseif ($this->request->request('order_type') == 2) {
-                $map['status'] = ['in', [3, 99]];
-                $list          = $model->where($map)->order('createtime desc')->paginate($pageSize);
+            } 
+            if ($this->request->request('order_type') == 2) {
+                $map['status'] = ['in', [ 99]];
+                $list          = $model->where($map)->order('createtime desc')->
+                paginate($pageSize, false, ['page' => $page]);
+                // 加入结束时间
+                foreach ($list as $key => $value) {
+                  // 如果status > 2
+                  if ($value['status'] > 2) {
+                    $list[$key]['end_time']     = Db::name('ddrive_order_location')->where('order_id', $value['id'])->where('type', 2)->value('createtime');
+                    $list[$key]['end_datetime'] = date('Y-m-d H:i:s', $list[$key]['end_time']);
+                  }
+                }
                 $this->success("查询成功", $list);
             }
+        } else {
+            $map['driver_id'] = $this->auth->id;
+            $list             = $model->where($map)->order('createtime desc')->paginate($pageSize, false, ['page' => $page]);
+
+            $this->success("查询成功", $list);
         }
     }
 
@@ -244,9 +278,13 @@ class Order extends Api
         if ($info->driver) {
             $info['driver'] = $info->driver;
             // 司机照片
-            $apply                         = Apply::where('user_id', $info['driver']['id'])->find();
-            $info['driver']['avatar']      = url("/", "", "", true) . '..' . $apply['image'];
-            $info['driver']['driving_age'] = $apply['driving_age'];
+            // $apply                         = Apply::where('user_id', $info['driver']['id'])->find();
+            // $info['driver']['avatar']      = url("/", "", "", true) . '..' . $apply['image'];
+            // $info['driver']['driving_age'] = $apply['driving_age'];
+            // 从driver_verified取出driver_age
+            $info['driver']['driving_age'] = (new DriverVerified())->where('user_id', $info['driver']['id'])->value('driver_age');
+            // 从user表取出头像
+            $info['driver']['avatar'] = (new User())->where('id', $info['driver']['id'])->value('avatar');
             // 总里程
             $total                            = $this->model->where('driver_id', $info['driver']['id'])->sum('distance');
             $info['driver']['total_distance'] = $total ? ceil($total / 1000) : 0;
@@ -308,6 +346,7 @@ class Order extends Api
         $restrict_service_fee = get_addon_config('ddrive')['restrict_service_fee'];
         $platform_service_fee = (new User())->where('id', $this->auth->id)->value('platform_service_fee');
         $mobile               = (new User())->where('id', $this->auth->id)->value('mobile');
+        $money               = (new User())->where('id', $this->auth->id)->value('money');
         $user_verified        = (new UserVerified())->where('user_id', $this->auth->id)->find();
         if ($user_verified) {
             if ($user_verified['real_verified'] != 1) {
@@ -323,6 +362,9 @@ class Order extends Api
         if ($restrict_service_fee <= $platform_service_fee) {
             $this->error('请缴纳平台服务费后接单');
         }
+        if ($money < $restrict_service_fee) {
+            $this->error('余额不足,请充值后接单. 余额需大于' . $restrict_service_fee . '元');
+        }
         $orderId = $this->request->param('order_id');
         // 判断订单是否被接单
         $order = $this->model->where('id', $orderId)->find();
@@ -333,7 +375,7 @@ class Order extends Api
             $this->error('手慢了,订单已被抢');
         }
         if ($order['type'] == 1) {
-            $driver_order = $this->model->where('driver_id', $this->auth->id)->whereIn('status', [1, 2, 4, 5])->whereNotIn('type', [2])->find();
+            $driver_order = $this->model->where('driver_id', $this->auth->id)->whereIn('status', [1, 2, 3, 4, 5])->whereNotIn('type', [2])->find();
             if ($driver_order) {
                 $this->error('存在未完成订单,禁止重复接单');
             }
@@ -376,6 +418,7 @@ class Order extends Api
         $orderId = $this->request->param('order_id');
 
         $res = $this->model->where('id', $orderId)->update(['status' => 1]);
+
         if ($res) {
             $this->success('操作成功');
         } else {
@@ -390,7 +433,8 @@ class Order extends Api
     public function offline()
     {
         $orderId = $this->request->param('order_id');
-        $res     = $this->model->where('id', $orderId)->update(['status' => 99, 'complete_time' => time()]);
+        $remark  = $this->request->param('remark');
+        $res     = $this->model->where('id', $orderId)->update(['status' => 99, 'complete_time' => time(), 'remark' => $remark]);
         if ($res) {
             $order = $this->model->where('id', $orderId)->find();
             // 查询订单上次位置
@@ -400,9 +444,12 @@ class Order extends Api
             $duration = $location['createtime'] - $order['createtime'];
 
             $platform_service_fee      = get_addon_config('ddrive')['platform_service_fee'];
+            $insurance_fee             = get_addon_config('ddrive')['insurance_fee'];
             $user_platform_service_fee = (new User())->where('id', $this->auth->id)->value('platform_service_fee');
             //累加服务费
-            $user_res = (new User())->where('id', $this->auth->id)->update(['platform_service_fee' => $user_platform_service_fee + number_format(($price * ($platform_service_fee / 100)), 2)]);
+            // 直接扣除余额
+            $user_res = (new User())->where('id', $this->auth->id)->setDec('money', $price + number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee);
+            // $user_res = (new User())->where('id', $this->auth->id)->update(['platform_service_fee' => $user_platform_service_fee + number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee]);
             // 修改订单信息
             $data = [
                 'status'               => 3,
@@ -410,7 +457,42 @@ class Order extends Api
                 'distance'             => $location['distance'],
                 'duration'             => $duration,
                 'platform_service_fee' => number_format(($price * ($platform_service_fee / 100)), 2),
+                'insurance_fee'        => number_format(($insurance_fee), 2),
             ];
+            Db::name('details')->insert([
+              'user_id'        => $order['driver_id'],
+              'fluctuate_type' => 2,
+              'msg'            => '平台服务费',
+              'amount'         => number_format(($price * ($platform_service_fee / 100)), 2),
+              'assets_type'    => 2,
+              'source_type'    => 2,
+              'createtime'     => time(),
+              'form_id'        => $orderId,
+          ]);
+          Db::name('details')->insert([
+            'user_id'        => $order['driver_id'],
+            'fluctuate_type' => 1,
+            'msg'            => '代驾线下款',
+            'amount'         => number_format(($price ), 2),
+            'assets_type'    => 2,
+            'source_type'    => 2,
+            'createtime'     => time(),
+            'form_id'        => $orderId,
+        ]);
+          Db::name('details')->insert([
+            'user_id'        => $order['driver_id'],
+            'fluctuate_type' => 2,
+            'msg'            => '订单保险费',
+            'amount'         => number_format(($insurance_fee), 2),
+            'assets_type'    => 2,
+            'source_type'    => 2,
+            'createtime'     => time(),
+            'form_id'        => $orderId,
+        ]);
+
+          // 增加会员积分
+          $pointLib = new \addons\ddrive\library\Point;
+          $pointLib->orderDone($order);
             if ($user_res) {
                 $this->success('操作成功');
             } else {
@@ -441,7 +523,8 @@ class Order extends Api
             $this->error('无需重复操作');
         }
         // 接单
-        $res = $this->model->where('id', $orderId)->update(['status' => 2]);
+        $res = $this->model->where('id', $orderId)->update(['status' => 2, 'starttime' => time()]);
+            // 更新表中starttime
         // 记录起始位置
         $data = [
             'order_id'   => $orderId,
@@ -520,9 +603,16 @@ class Order extends Api
         }
         // 查询订单上次位置
         $location = Db::name('ddrive_order_location')->where('order_id', $orderId)->where('type', 2)->order('id desc')->find();
-        $price    = Lib::getPrice($location['distance'], date('H', $order['createtime']));
-        // 计算时间
-        $duration = $location['createtime'] - $order['createtime'];
+        
+        if (!$location) {
+            $price = 0;
+            $duration = 0;
+        } else {
+
+          $price    = Lib::getPrice($location['distance'], date('H', $order['createtime']));
+          // 计算时间
+          $duration = $location['createtime'] - $order['createtime'];
+        }
         // 修改订单信息
         $data = [
             'status'   => 3,
