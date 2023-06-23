@@ -85,6 +85,8 @@ class Order extends Backend
             $params = $this->request->post("row/a");
             if ($params) {
                 $params = $this->preExcludeFields($params);
+                // 把distance转换成m
+                // $params['distance'] = $params['distance'] * 1000;
                 // 判断司机有没有正在进行的订单
                 $driver_id = $params['driver_id'];
                 $driver_order = Db::name('ddrive_order')->where('driver_id',$driver_id)->where('status','in','1,2,3,4')->find();
@@ -105,7 +107,7 @@ class Order extends Backend
                         $this->model->validateFailException(true)->validate($validate);
                     }
                     $params['mobile'] = Db::name('user')->where('id',$params['user_id'])->value('mobile');
-                    $params['appointment_time'] = strtotime($params['appointment_time']);
+                    // $params['appointment_time'] = strtotime($params['appointment_time']);
                     $result = $this->model->allowField(true)->save($params);
                     Db::commit();
                 } catch (ValidateException $e) {
@@ -164,7 +166,8 @@ class Order extends Backend
                         $row->validateFailException(true)->validate($validate);
                     }
                     $params['mobile'] = Db::name('user')->where('id',$row['user_id'])->value('mobile');
-                    $params['appointment_time'] = strtotime($params['appointment_time']);
+                    // $params['distance'] = $params['distance'] * 1000;
+                    // $params['appointment_time'] = strtotime($params['appointment_time']);
                     $result = $row->allowField(true)->save($params);
                     Db::commit();
                 } catch (ValidateException $e) {

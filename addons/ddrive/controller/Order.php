@@ -250,7 +250,7 @@ class Order extends Api
         // $end_address      = $this->request->post('end_address');
         $end_latitude     = $this->request->post('end_latitude');
         $end_longitude    = $this->request->post('end_longitude');
-        $distance         = Lib::getDistance($start_latitude, $start_longitude, $end_latitude, $end_longitude)/ 1000;
+        $distance         = Lib::getDistance($start_latitude, $start_longitude, $end_latitude, $end_longitude);
         // 下单数据
         $data = [
             'mobile'           => $mobile,
@@ -265,9 +265,9 @@ class Order extends Api
             'end_address'      => $this->request->post('end_address'),
             'end_latitude'     => $this->request->post('end_latitude'),
             'end_longitude'    => $this->request->post('end_longitude'),
-            'distance'         => $distance,
+            'distance'         => $distance/ 1000,
             'duration'         => $this->request->post('duration'),
-            'estimated_price'  => Lib::getPrice($this->request->post('distance'), date('H', time())),
+            'estimated_price'  => Lib::getPrice($distance, date('H', time())),
             'user_id'          => $id ,
             'reachtime'        => 0,
             'type'             => $type,
@@ -730,7 +730,7 @@ class Order extends Api
         $data = [
             'status'   => 3,
             'price'    => $price,
-            'distance' => $location['distance'],
+            'distance' => $location['distance']/ 1000,
             'complete_time' => time(), // 订单完成时间
             'duration' => $duration,
         ];
