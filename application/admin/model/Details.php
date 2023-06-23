@@ -34,17 +34,17 @@ class Details extends Model
     
     public function getFluctuateTypeList()
     {
-        return ['1' => __('Fluctuate_type 1')];
+        return ['1' => __('Fluctuate_type 1'), '2' => __('Fluctuate_type 2')];
     }
 
     public function getAssetsTypeList()
     {
-        return ['1' => __('Assets_type 1'), '2' => __('Assets_type 2')];
+        return [ '2' => __('Assets_type 2')];
     }
 
     public function getSourceTypeList()
     {
-        return ['1' => __('Source_type 1'), '2' => __('Source_type 2')];
+        return [ '2' => __('Source_type 2')];
     }
 
 

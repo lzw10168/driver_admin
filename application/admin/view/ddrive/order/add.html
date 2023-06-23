@@ -1,3 +1,21 @@
+<style>
+  .driver_status-0 {
+    color: #ccc !important; 
+  }
+  /* // 蓝色空闲0 */
+                  /* // 黄色创单1 */
+                  /* // 红色有客2 */
+  .driver_status-1 .driver_create-status_0 {
+    color: rgb(45, 115, 221);
+  }
+  .driver_status-1 .driver_create-status_1 {
+    color: rgb(255, 153, 0);
+  }
+  .driver_status-1 .driver_create-status_2 {
+    color: rgb(255, 0, 0);
+  }
+
+</style>
 <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
   <div class="form-group">
@@ -10,11 +28,20 @@
   <div class="form-group">
     <label class="control-label col-xs-12 col-sm-2">{:__('Driver_id')}:</label>
     <div class="col-xs-12 col-sm-8">
-      <input id="c-driver_id"  data-rule="required" data-source="driver_user/getList" data-field="mobile" class="form-control selectpage"
+      <script type="text/html" id="titletpl">
+        <span class="driver_status-<%=driver_status%>">
+          
+          <span class="driver_create-status_<%=driver_create_status%>">
+            <%=username%> - <%=mobile%>
+          </span>
+        </span>
+        </script>
+      <input id="c-driver_id"  data-rule="required" data-source="driver_user/getList" data-field="mobile" data-format-item="#titletpl" class="form-control selectpage"
         name="row[driver_id]" type="text" value="">
-        <!-- <span>如选择司机,请选择
-          <span style="color: red">已接单</span>
-      </span> -->
+        <span style="color: red;">
+          1: 灰色: 不在线; 2: 蓝色: 空闲; 3: 黄色: 创单; 4: 红色: 有客
+      </span>
+
     </div>
   </div>
   <div class="form-group" style="display: none;">
@@ -228,6 +255,13 @@
   //     'msg' => '',
   //     'tip' => '填写22表示22点前以白天基础价为准',
   // ],
+
+
+  // $('#c-driver_id').selectPage({
+  //       formatItem: function(data) {
+  //         return data.a + '(' + data.b + ')'
+  //       }
+  //     })
 
   const mileage = 7;
   const base_price = 30;

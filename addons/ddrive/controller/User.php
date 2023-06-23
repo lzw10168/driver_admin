@@ -214,6 +214,82 @@ class User extends Api
         $this->success('更新成功');
     }
 
+
+    /**
+     * 统计中心
+     * params: {
+     *  datetype: 0,1,2,3 // 今日,昨日,本月,今年
+     * }
+     * 返回当前用户的总订单数, 完成订单数, 订单流水总金额, 收入流水需要扣除平台抽成, 保险费
+     */
+
+     public function statistics() {
+      $user = $this->auth->getUser();
+      $datetype = $this->request->request('datetype', 0);
+      $start_time = '';
+      $end_time = '';
+      if ($datetype == 0) {
+        $start_time = date('Y-m-d 00:00:00');
+        $end_time = date('Y-m-d 23:59:59');
+      } else if ($datetype == 1) {
+        $start_time = date('Y-m-d 00:00:00', strtotime('-1 day'));
+        $end_time = date('Y-m-d 23:59:59', strtotime('-1 day'));
+      } else if ($datetype == 2) {
+        $start_time = date('Y-m-01 00:00:00');
+        $end_time = date('Y-m-d 23:59:59');
+      } else if ($datetype == 3) {
+        $start_time = date('Y-01-01 00:00:00');
+        $end_time = date('Y-m-d 23:59:59');
+      }
+
+      // // 转成时间戳
+      $start_time = strtotime($start_time);
+      $end_time = strtotime($end_time);
+
+      // print_r($start_time);
+      // print_r($end_time);
+
+      $order_count = Db::name('ddrive_order')->where('driver_id', $user->id)->where('createtime', 'between', [$start_time, $end_time])->count();
+      $order_finish_count = Db::name('ddrive_order')->where('driver_id', $user->id)->where('createtime', 'between', [$start_time, $end_time])->where('status', 99)->count();
+      $order_price = Db::name('ddrive_order')->where('driver_id', $user->id)->where('createtime', 'between', [$start_time, $end_time])->sum('price');
+      $order_finish_price = Db::name('ddrive_order')->where('driver_id', $user->id)->where('createtime', 'between', [$start_time, $end_time])->where('status', 99)->sum('price');
+
+
+      $data = [
+        'order_count' => $order_count,
+        'order_finish_count' => $order_finish_count,
+        // 保留两位小数
+        'order_price' => round($order_price, 2),
+        'order_finish_price' => round($order_finish_price, 2),
+      ];
+      $this->success('获取成功', $data);
+
+     }
+
+    public function uploadDriverStatus() {
+        $user = $this->auth->getUser();
+        $driver_status = $this->request->request('status');
+        $driver_create_status = $this->request->request('create_status');
+
+        //driver_status 表中更新
+        $driver = Db::name('driver_status')->where('user_id', $user->id)->find();
+        if ($driver) {
+          // 判断一下是否为undefined, null, ''
+          
+          if (!!$driver_status) {
+            print_r($driver_status);
+            // 更新
+            Db::name('driver_status')->where('user_id', $user->id)->update(['status' => $driver_status]);
+          }
+          if (!!$driver_create_status) {
+            // 更新
+            Db::name('driver_status')->where('user_id', $user->id)->update(['create_status' => $driver_create_status]);
+          }
+        }
+
+        $this->success('更新成功');
+    }
+
     /**
      * 重置密码
      *
@@ -1127,26 +1203,7 @@ class User extends Api
         $this->success('成功');
     }
     // 司机正在创建订单状态
-    public function driver_creating_status()
-    {
-        $status = $this->request->param('status', 1);
-        if (!in_array($status, [0, 1])) {
-            $this->error('参数错误');
-        }
-        $driver_status = Db::name('driver_status')->where('user_id', $this->auth->id)->find();
-        if ($driver_status) {
-            Db::name('driver_status')->where('user_id', $this->auth->id)->setField('creating', $status);
-            Db::name('driver_status')->where('user_id', $this->auth->id)->setField('createtime', time());
-        } else {
-            Db::name('driver_status')->insert([
-                'user_id'    => $this->auth->id,
-                'status'     => 0,
-                'creating'   => $status,
-                'createtime' => time(),
-            ]);
-        }
-        $this->success('成功');
-    }
+
 
     function distance($lat1, $lon1, $lat2, $lon2, $unit = 'km', $decimal = 2) {
       $theta = $lon1 - $lon2;
@@ -1159,6 +1216,8 @@ class User extends Api
           return round($miles * 1.609344, $decimal);
       } else if ($unit == "nautical miles") {
           return round($miles * 0.8684, $decimal);
+      } else if ($unit == "m") {
+          return round($miles * 1609.344, $decimal);
       } else {
           return round($miles, $decimal);
       }
@@ -1208,8 +1267,11 @@ class User extends Api
             $list[$key]['driver_age'] = $card_verified['driver_age'];
           }
           if ($driver_status) {
-            $list[$key]['driver_status'] = $driver_status['status'];
-            $list[$key]['driver_create_status'] = $driver_status['create_status'];
+            $list[$key]['driver_status'] = $driver_status['status']; // 状态:0=下班,1=上班
+            // 蓝色空闲0
+            // 黄色创单1
+            // 红色有客2
+            $list[$key]['driver_create_status'] = $driver_status['create_status']; 
           }
           // 从订单表中取出订单数
           $order_count = Db::name('ddrive_order')->where('driver_id', $value['user_id'])->count();

@@ -3,7 +3,7 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "同城代驾"
+        "navigationBarTitleText": "保城代驾"
       }
     }, {
       "path": "pages/login/login",
@@ -28,7 +28,7 @@
     }, {
       "path": "pages/taxiService/taxiService",
       "style": {
-        "navigationBarTitleText": "欢迎使用同城代驾",
+        "navigationBarTitleText": "欢迎使用保城代驾",
         "navigationBarBackgroundColor": "#FFFFFF"
 		
       }

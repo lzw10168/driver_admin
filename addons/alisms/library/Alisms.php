@@ -94,7 +94,6 @@ class Alisms
         $params = $this->_params();
         $params['Signature'] = $this->_signed($params);
         $response = $this->_curl($params);
-
         if ($response !== false) {
             $res = (array)json_decode($response, true);
             if (isset($res['Code']) && $res['Code'] == 'OK') {

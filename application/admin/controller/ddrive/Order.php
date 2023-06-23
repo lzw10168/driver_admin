@@ -85,6 +85,12 @@ class Order extends Backend
             $params = $this->request->post("row/a");
             if ($params) {
                 $params = $this->preExcludeFields($params);
+                // 判断司机有没有正在进行的订单
+                $driver_id = $params['driver_id'];
+                $driver_order = Db::name('ddrive_order')->where('driver_id',$driver_id)->where('status','in','1,2,3,4')->find();
+                if($driver_order){
+                  $this->error('司机有正在进行的订单');
+                }
 
                 if ($this->dataLimit && $this->dataLimitFieldAutoFill) {
                     $params[$this->dataLimitField] = $this->auth->id;
@@ -113,7 +119,13 @@ class Order extends Backend
                     $this->error($e->getMessage());
                 }
                 if ($result !== false) {
-                    $this->success();
+                  $this->success();
+                  // 拿到司机手机号, driver_id 就是司机id, 对应用户ID
+                  $driver_mobile = Db::name('user')->where('id',$params['driver_id'])->value('mobile');
+                  $sms_config = get_addon_config('alisms');
+
+                  \app\common\library\Sms::notice($driver_mobile, '', $sms_config['template']['createorder']);
+
                 } else {
                     $this->error(__('No rows were inserted'));
                 }

@@ -1,422 +1,614 @@
 <style type="text/css">
-    .sm-st {
-        background: #fff;
-        padding: 20px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        margin-bottom: 20px;
-        -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
-        box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
-    }
+  .sm-st {
+    background: #fff;
+    padding: 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+  }
 
-    .sm-st-icon {
-        width: 60px;
-        height: 60px;
-        display: inline-block;
-        line-height: 60px;
-        text-align: center;
-        font-size: 30px;
-        background: #eee;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        float: left;
-        margin-right: 10px;
-        color: #fff;
-    }
+  .sm-st-icon {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    background: #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 10px;
+    color: #fff;
+  }
 
-    .sm-st-info {
-        font-size: 12px;
-        padding-top: 2px;
-    }
+  .sm-st-info {
+    font-size: 12px;
+    padding-top: 2px;
+  }
 
-    .sm-st-info span {
-        display: block;
-        font-size: 24px;
-        font-weight: 600;
-    }
+  .sm-st-info span {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+  }
 
-    .orange {
-        background: #fa8564 !important;
-    }
+  .orange {
+    background: #fa8564 !important;
+  }
 
-    .tar {
-        background: #45cf95 !important;
-    }
+  .tar {
+    background: #45cf95 !important;
+  }
 
-    .sm-st .green {
-        background: #86ba41 !important;
-    }
+  .sm-st .green {
+    background: #86ba41 !important;
+  }
 
-    .pink {
-        background: #AC75F0 !important;
-    }
+  .pink {
+    background: #AC75F0 !important;
+  }
 
-    .yellow-b {
-        background: #fdd752 !important;
-    }
+  .yellow-b {
+    background: #fdd752 !important;
+  }
 
-    .stat-elem {
+  .stat-elem {
 
-        background-color: #fff;
-        padding: 18px;
-        border-radius: 40px;
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 40px;
 
-    }
+  }
 
-    .stat-info {
-        text-align: center;
-        background-color: #fff;
-        border-radius: 5px;
-        margin-top: -5px;
-        padding: 8px;
-        -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
-        box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
-        font-style: italic;
-    }
+  .stat-info {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: -5px;
+    padding: 8px;
+    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+    font-style: italic;
+  }
 
-    .stat-icon {
-        text-align: center;
-        margin-bottom: 5px;
-    }
+  .stat-icon {
+    text-align: center;
+    margin-bottom: 5px;
+  }
 
-    .st-red {
-        background-color: #F05050;
-    }
+  .st-red {
+    background-color: #F05050;
+  }
 
-    .st-green {
-        background-color: #27C24C;
-    }
+  .st-green {
+    background-color: #27C24C;
+  }
 
-    .st-violet {
-        background-color: #7266ba;
-    }
+  .st-violet {
+    background-color: #7266ba;
+  }
 
-    .st-blue {
-        background-color: #23b7e5;
-    }
+  .st-blue {
+    background-color: #23b7e5;
+  }
 
-    .stats .stat-icon {
-        color: #28bb9c;
-        display: inline-block;
-        font-size: 26px;
-        text-align: center;
-        vertical-align: middle;
-        width: 50px;
-        float: left;
-    }
+  .stats .stat-icon {
+    color: #28bb9c;
+    display: inline-block;
+    font-size: 26px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+    float: left;
+  }
 
-    .stat {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: inline-block;
-    }
-    .title {
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
+  .stat {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
 
-    .stat .value {
-        font-size: 20px;
-        line-height: 24px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-weight: 500;
-    }
+  .title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 
-    .stat .name {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .stat .value {
+    font-size: 20px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+  }
 
-    .stat.lg .value {
-        font-size: 26px;
-        line-height: 28px;
-    }
+  .stat .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .stat.lg .name {
-        font-size: 16px;
-    }
+  .stat.lg .value {
+    font-size: 26px;
+    line-height: 28px;
+  }
 
-    .stat-col .progress {
-        height: 2px;
-    }
+  .stat.lg .name {
+    font-size: 16px;
+  }
 
-    .stat-col .progress-bar {
-        line-height: 2px;
-        height: 2px;
-    }
+  .stat-col .progress {
+    height: 2px;
+  }
 
-    .item {
-        padding: 30px 0;
-    }
+  .stat-col .progress-bar {
+    line-height: 2px;
+    height: 2px;
+  }
+
+  .item {
+    padding: 30px 0;
+  }
 
 
 
-    #statistics .panel {
-        min-height: 150px;
-    }
+  #statistics .panel {
+    min-height: 150px;
+  }
 
-    #statistics .panel h5 {
-        font-size: 13px;
-    }
+  #statistics .panel h5 {
+    font-size: 13px;
+  }
+  .row {
+    padding: 20px;
+  }
 </style>
 <div class="panel panel-default panel-intro">
-    <div class="panel-heading">
-        {:build_heading(null, false)}
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#one" data-toggle="tab">{:__('Dashboard')}</a></li>
-            <li><a href="#two" data-toggle="tab">{:__('Custom')}</a></li>
-        </ul>
-    </div>
-    <div class="panel-body">
-        <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade active in" id="one">
+  <div class="panel-body">
+    <div id="myTabContent" class="tab-content">
 
-                <div class="row">
-                    <div class="col-sm-3 col-xs-6">
-                        <div class="sm-st clearfix">
-                            <span class="sm-st-icon st-red"><i class="fa fa-users"></i></span>
-                            <div class="sm-st-info">
-                                <span>{$totalorder}</span>
-                                总订单量
-                                <!-- {:__('Total user')} -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <div class="sm-st clearfix">
-                            <span class="sm-st-icon st-violet"><i class="fa fa-book"></i></span>
-                            <div class="sm-st-info">
-                                <span>{$totalmoney}</span>
-                                司机余额
-                                <!-- {:__('Total view')} -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <div class="sm-st clearfix">
-                            <span class="sm-st-icon st-blue"><i class="fa fa-shopping-bag"></i></span>
-                            <div class="sm-st-info">
-                                <span>{$todayorderamount}</span>
-                                <!-- {:__('Total order')} -->
-                                今日平台收入
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <div class="sm-st clearfix">
-                            <span class="sm-st-icon st-green"><i class="fa fa-cny"></i></span>
-                            <div class="sm-st-info">
-                                <span>{$totalorderamount}</span>
-                                <!-- {:__('Total order amount')} -->
-                                平台累计收入
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <!-- <div class="col-lg-8">
-                        <div id="echart" class="btn-refresh" style="height:200px;width:100%;"></div>
-                    </div> -->
-                    <div class="col-lg-5">
-                        <div class="card sameheight-item stats">
-                            <div class="card-block">
-                              <div class="title">
-                                今日订单数据
-                              </div>
-                                <div class="row row-sm stats-container">
-                                    <div class="col-xs-4 stat-col">
-                                        <!-- <div class="stat-icon"><i class="fa fa-rocket"></i></div> -->
-                                        <div class="stat">
-                                            <div class="value"> {$todayorder}</div>
-                                            <div class="name"> 发单量(单)</div>
-                                            
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 30%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4 stat-col">
-                                        <!-- <div class="stat-icon"><i class="fa fa-shopping-cart"></i></div> -->
-                                        <div class="stat">
-                                            <div class="value"> {$todayongoingorder}</div>
-                                            <div class="name"> 正在进行订单(单)</div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4  stat-col">
-                                        <!-- <div class="stat-icon"><i class="fa fa-line-chart"></i></div> -->
-                                        <div class="stat">
-                                            <div class="value"> {$todayfinishorder}</div>
-                                            <div class="name"> 完单量(单)</div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4  stat-col">
-                                        <!-- <div class="stat-icon"><i class="fa fa-users"></i></div> -->
-                                        <div class="stat">
-                                            <div class="value"> {$todayorderamount}</div>
-                                            <div class="name"> 支付金额(元)</div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4  stat-col">
-                                        <!-- <div class="stat-icon"><i class="fa fa-list-alt"></i></div> -->
-                                        <div class="stat">
-                                            <div class="value"> {$todaymsgfee}</div>
-                                            <div class="name"> 信息费(元)</div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4 stat-col">
-                                        <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
-                                        <div class="stat">
-                                            <div class="value"> {$todayinsurefee}</div>
-                                            <div class="name"> 保险费(元)</div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4 stat-col">
-                                        <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
-                                        <div class="stat">
-                                            <div class="value"> {$todayorderavgduration}</div>
-                                            <div class="name"> 平均时长(分钟)</div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4 stat-col">
-                                        <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
-                                        <div class="stat">
-                                            <div class="value"> {$todayorderavgdistance}</div>
-                                            <div class="name"> 平均里程(公里)</div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row" style="margin-top:15px;" id="statistics">
-
-                    <div class="col-lg-12">
-                    </div>
-                    <!-- <div class="col-xs-6 col-md-3">
-                        <div class="panel bg-blue-gradient no-border">
-                            <div class="panel-body">
-                                <div class="panel-title">
-                                    <span class="label label-primary pull-right">{:__('Real time')}</span>
-                                    <h5>{:__('Category count')}</h5>
-                                </div>
-                                <div class="panel-content">
-                                    <h1 class="no-margins">1234</h1>
-                                    <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
-                                    <small>{:__('Category count tips')}</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="col-xs-6 col-md-3">
-                        <div class="panel bg-aqua-gradient no-border">
-                            <div class="panel-body">
-                                <div class="ibox-title">
-                                    <span class="label label-primary pull-right">{:__('Real time')}</span>
-                                    <h5>{:__('Attachment count')}</h5>
-                                </div>
-                                <div class="ibox-content">
-                                    <h1 class="no-margins">1043</h1>
-                                    <div class="stat-percent font-bold text-gray"><i class="fa fa-modx"></i> 2592</div>
-                                    <small>{:__('Attachment count tips')}</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="col-xs-6 col-md-3">
-                        <div class="panel bg-purple-gradient no-border">
-                            <div class="panel-body">
-                                <div class="ibox-title">
-                                    <span class="label label-primary pull-right">{:__('Real time')}</span>
-                                    <h5>{:__('Article count')}</h5>
-                                </div>
-                                <div class="ibox-content">
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h1 class="no-margins">1234</h1>
-                                            <div class="font-bold"><i class="fa fa-commenting"></i>
-                                                <small>{:__('Comment count')}</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h1 class="no-margins">6754</h1>
-                                            <div class="font-bold"><i class="fa fa-heart"></i>
-                                                <small>{:__('Like count')}</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-xs-6 col-md-3">
-                        <div class="panel bg-green-gradient no-border">
-                            <div class="panel-body">
-                                <div class="ibox-title">
-                                    <span class="label label-primary pull-right">{:__('Real time')}</span>
-                                    <h5>{:__('News count')}</h5>
-                                </div>
-                                <div class="ibox-content">
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h1 class="no-margins">5302</h1>
-                                            <div class="font-bold"><i class="fa fa-commenting"></i>
-                                                <small>{:__('Comment count')}</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h1 class="no-margins">8205</h1>
-                                            <div class="font-bold"><i class="fa fa-user"></i>
-                                                <small>{:__('Like count')}</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
+      <div class="row">
+        <div class="col-sm-3 col-xs-6">
+          <div class="sm-st clearfix">
+            <span class="sm-st-icon st-red"><i class="fa fa-users"></i></span>
+            <div class="sm-st-info">
+              <span>{$totalorder}</span>
+              总订单量
+              <!-- {:__('Total user')} -->
             </div>
-            <div class="tab-pane fade" id="two">
-                <div class="row">
-                    <div class="col-xs-12">
-                        {:__('Custom zone')}
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-sm-3 col-xs-6">
+          <div class="sm-st clearfix">
+            <span class="sm-st-icon st-violet"><i class="fa fa-book"></i></span>
+            <div class="sm-st-info">
+              <span>{$totalmoney}</span>
+              司机余额
+              <!-- {:__('Total view')} -->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <div class="sm-st clearfix">
+            <span class="sm-st-icon st-blue"><i class="fa fa-shopping-bag"></i></span>
+            <div class="sm-st-info">
+              <span>{$todayorderamount}</span>
+              <!-- {:__('Total order')} -->
+              今日平台收入
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <div class="sm-st clearfix">
+            <span class="sm-st-icon st-green"><i class="fa fa-cny"></i></span>
+            <div class="sm-st-info">
+              <span>{$totalorderamount}</span>
+              <!-- {:__('Total order amount')} -->
+              平台累计收入
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-heading">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#one" data-toggle="tab">今日数据</a></li>
+          <li><a href="#two" data-toggle="tab">昨日数据</a></li>
+          <li><a href="#three" data-toggle="tab">本月数据</a></li>
+          <li><a href="#foure" data-toggle="tab">近半年数据</a></li>
+          
+        </ul>
+      </div>
+      <div class="tab-pane fade active in" id="one">
+        <div class="row" >
+          <div class="col-lg-5">
+            <div class="card sameheight-item stats">
+              <div class="card-block">
+                <div class="title">
+                  今日订单数据
+                </div>
+                <div class="row row-sm stats-container">
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-rocket"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$todayorder}</div>
+                      <div class="name"> 发单量(单)</div>
+
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 30%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-shopping-cart"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$todayongoingorder}</div>
+                      <div class="name"> 正在进行订单(单)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-line-chart"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$todayfinishorder}</div>
+                      <div class="name"> 完单量(单)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-users"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$todayorderamount}</div>
+                      <div class="name"> 支付金额(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-list-alt"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$todaymsgfee}</div>
+                      <div class="name"> 信息费(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$todayinsurefee}</div>
+                      <div class="name"> 保险费(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$todayorderavgduration}</div>
+                      <div class="name"> 平均时长(分钟)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$todayorderavgdistance}</div>
+                      <div class="name"> 平均里程(公里)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade " id="two">
+        <div class="row" >
+          <div class="col-lg-5">
+            <div class="card sameheight-item stats">
+              <div class="card-block">
+                <div class="title">
+                  昨日订单数据
+                </div>
+                <div class="row row-sm stats-container">
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-rocket"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$yesterdayorder}</div>
+                      <div class="name"> 发单量(单)</div>
+
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 30%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-shopping-cart"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$yesterdayongoingorder}</div>
+                      <div class="name"> 正在进行订单(单)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-line-chart"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$yesterdayfinishorder}</div>
+                      <div class="name"> 完单量(单)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-users"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$yesterdayorderamount}</div>
+                      <div class="name"> 支付金额(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-list-alt"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$yesterdaymsgfee}</div>
+                      <div class="name"> 信息费(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$yesterdayinsurefee}</div>
+                      <div class="name"> 保险费(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$yesterdayorderavgduration}</div>
+                      <div class="name"> 平均时长(分钟)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$yesterdayorderavgdistance}</div>
+                      <div class="name"> 平均里程(公里)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade " id="three">
+        <div class="row" >
+          <div class="col-lg-5">
+            <div class="card sameheight-item stats">
+              <div class="card-block">
+                <div class="title">
+                  本月订单数据
+                </div>
+                <div class="row row-sm stats-container">
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-rocket"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$monthorder}</div>
+                      <div class="name"> 发单量(单)</div>
+
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 30%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-shopping-cart"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$monthongoingorder}</div>
+                      <div class="name"> 正在进行订单(单)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-line-chart"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$monthfinishorder}</div>
+                      <div class="name"> 完单量(单)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-users"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$monthorderamount}</div>
+                      <div class="name"> 支付金额(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-list-alt"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$monthmsgfee}</div>
+                      <div class="name"> 信息费(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$monthinsurefee}</div>
+                      <div class="name"> 保险费(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$monthorderavgduration}</div>
+                      <div class="name"> 平均时长(分钟)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$monthorderavgdistance}</div>
+                      <div class="name"> 平均里程(公里)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade " id="foure">
+        <div class="row" >
+          <div class="col-lg-5">
+            <div class="card sameheight-item stats">
+              <div class="card-block">
+                <div class="title">
+                  近半年订单数据
+                </div>
+                <div class="row row-sm stats-container">
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-rocket"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$last6monthorder}</div>
+                      <div class="name"> 发单量(单)</div>
+
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 30%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-shopping-cart"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$last6monthongoingorder}</div>
+                      <div class="name"> 正在进行订单(单)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-line-chart"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$last6monthfinishorder}</div>
+                      <div class="name"> 完单量(单)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-users"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$last6monthorderamount}</div>
+                      <div class="name"> 支付金额(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4  stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-list-alt"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$last6monthmsgfee}</div>
+                      <div class="name"> 信息费(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$last6monthinsurefee}</div>
+                      <div class="name"> 保险费(元)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$last6monthorderavgduration}</div>
+                      <div class="name"> 平均时长(分钟)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 stat-col">
+                    <!-- <div class="stat-icon"><i class="fa fa-dollar"></i></div> -->
+                    <div class="stat">
+                      <div class="value"> {$last6monthorderavgdistance}</div>
+                      <div class="name"> 平均里程(公里)</div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <!--@formatter:off-->
 <script>

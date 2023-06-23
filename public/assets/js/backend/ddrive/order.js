@@ -21,6 +21,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
                 pk: 'id',
                 sortName: 'id',
+                searchFormVisible: true,
                 columns: [
                     [
                         {checkbox: true},
@@ -32,9 +33,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'start_address', title: __('Start_address')},
                         {field: 'end_address', title: __('End_address')},
                         {field: 'price', title: __('Price'), operate:'BETWEEN'},
-                        {field: 'platform_service_fee', title: __('Platform_service_fee'), operate:'BETWEEN'},
+                        // {field: 'platform_service_fee', title: __('Platform_service_fee'), operate:'BETWEEN'},
                         {field: 'status', title: __('Status'), searchList: {"-2":__('Status -2'),"-1":__('Status -1'),"0":__('Status 0'),"1":__('Status 1'),"2":__('Status 2'),"3":__('Status 3'),"4":__('Status 4'),"99":__('Status 99')}, formatter: Table.api.formatter.status},
-                        {field: 'cancel_type', title: __('Cancel_type'), searchList: {"0":__('Cancel_type 0'),"1":__('Cancel_type 1'),"2":__('Cancel_type 2'),"3":__('Status 3'),"4":__('Status 4'),"5":__('Status 5'),"6":__('Status 6'),"7":__('Status 7'),"8":__('Status 8'),"9":__('Status 9'),"10":__('Status 10'),"11":__('Status 11'),"12":__('Status 12')}, formatter: Table.api.formatter.status},
+                        // {field: 'cancel_type', title: __('Cancel_type'), searchList: {"0":__('Cancel_type 0'),"1":__('Cancel_type 1'),"2":__('Cancel_type 2'),"3":__('Status 3'),"4":__('Status 4'),"5":__('Status 5'),"6":__('Status 6'),"7":__('Status 7'),"8":__('Status 8'),"9":__('Status 9'),"10":__('Status 10'),"11":__('Status 11'),"12":__('Status 12')}, formatter: Table.api.formatter.status},
                         // {field: 'comment', title: __('Comment'), searchList: {"0":__('Comment 0'),"1":__('Comment 1')}, formatter: Table.api.formatter.normal},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: function (value, row, index) {

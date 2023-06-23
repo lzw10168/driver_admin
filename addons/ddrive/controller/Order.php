@@ -195,6 +195,106 @@ class Order extends Api
         }
         $this->success("", $list);
     }
+    // 司机手动创建订单
+    public function deriverCreate()
+    {
+        $driver_user = $this->auth->getUser();
+        // 从derive_verified表中获取司机的信息
+        $driver = Db::name('driver_verified')->where('user_id', $this->auth->id)->find();
+        if (!$driver || $driver['status'] != 1) {
+            $this->error('您的账号未认证, 请先认证');
+        };
+        // 状态:-2=已超时,-1=已取消,0=呼叫中,1=已接单,2=进行中,3=待支付,4=司机已到达,5=预约单待司机出发,99=已完成
+        // 判断司机是否有正在进行中的订单
+        $order = Db::name('ddrive_order')->where('driver_id', $this->auth->id)->where('status', 'in', [1, 2, 3, 4])->find();
+        if ($order) {
+            $this->error('您有正在进行中的订单, 请先完成订单');
+        }
+        // 联系电话
+        $mobile = $this->request->post('mobile');
+        $name = $this->request->post('name');
+        // 查询user表中是否有该用户mobile或者 username 匹配
+        $user = Db::name('user')->where('mobile', $mobile)->find();
+        // 更新nickname
+        if (!$user) {
+            // 如果没有该用户, 则创建用户
+            $user = Db::name('user')->insertGetId([
+                'mobile' => $mobile,
+                'username' => $mobile, // 'username' => '司机' . $mobile,
+                'nickname' => $name,
+                'password' => md5('123456'), // 默认密码
+                'status' => 'normal',
+                'money' => 0,
+                'createtime' => time(),
+                'updatetime' => time(),
+            ]);
+        } else {
+            // 如果有该用户, 则更新用户
+            $user = Db::name('user')->where('mobile', $mobile)->update([
+                'nickname' => $name,
+                'updatetime' => time(),
+            ]);
+        }
+        $user = Db::name('user')->where('mobile', $mobile)->find();
+        $id = $user['id'];
+        // 联系电话
+        $type             = 1;
+        $appointment_time = 0;
+        // $start            = $this->request->post('start');
+        // $start_city       = $this->request->post('start_city');
+        // $start_address    = $this->request->post('start_address');
+        $start_latitude   = $this->request->post('start_latitude');
+        $start_longitude  = $this->request->post('start_longitude');
+        // $end              = $this->request->post('end');
+        // $end_city         = $this->request->post('end_city');
+        // $end_address      = $this->request->post('end_address');
+        $end_latitude     = $this->request->post('end_latitude');
+        $end_longitude    = $this->request->post('end_longitude');
+        $distance         = Lib::getDistance($start_latitude, $start_longitude, $end_latitude, $end_longitude)/ 1000;
+        // 下单数据
+        $data = [
+            'mobile'           => $mobile,
+            'driver_id'        => $this->auth->id,
+            'start'            => $this->request->post('start'),
+            'start_city'       => $this->request->post('start_city'),
+            'start_address'    => $this->request->post('start_address'),
+            'start_latitude'   => $this->request->post('start_latitude'),
+            'start_longitude'  => $this->request->post('start_longitude'),
+            'end'              => $this->request->post('end'),
+            'end_city'         => $this->request->post('end_city'),
+            'end_address'      => $this->request->post('end_address'),
+            'end_latitude'     => $this->request->post('end_latitude'),
+            'end_longitude'    => $this->request->post('end_longitude'),
+            'distance'         => $distance,
+            'duration'         => $this->request->post('duration'),
+            'estimated_price'  => Lib::getPrice($this->request->post('distance'), date('H', time())),
+            'user_id'          => $id ,
+            'reachtime'        => 0,
+            'type'             => $type,
+            'appointment_time' => $appointment_time,
+            'status'           => 1, // 已接单
+        ];
+        $rule = [
+            ['start', 'require', '请填写出发地'],
+            ['end', 'require', '请填写目的地'],
+        ];
+
+        (new Check())->checkParam($rule);
+        $model = $this->model;
+        $res   = $model->data($data)->save();
+        if ($res) {
+            
+            $sms_config = get_addon_config('alisms');
+        
+            $ddr_config = get_addon_config('ddrive');
+            // $mobiles = explode("\r\n", $ddr_config['noticeMobile']);
+            // \app\common\library\Sms::notice($ddr_config['noticeMobile'], ['type'=>'代驾'], $sms_config['template']['notice']);
+            
+            $this->success('订单创建成功', ['order_id' => $model->id]);
+        } else {
+            $this->error('订单创建失败');
+        }
+    }
 
     /**
      * 创建订单
@@ -443,6 +543,9 @@ class Order extends Api
             // 计算时间
             $duration = $location['createtime'] - $order['createtime'];
 
+            // 更改司机状态
+            Db::name('driver_status')->where('user_id', $this->auth->id)->update(['create_status' => 0]);
+
             $platform_service_fee      = get_addon_config('ddrive')['platform_service_fee'];
             $insurance_fee             = get_addon_config('ddrive')['insurance_fee'];
             $user_platform_service_fee = (new User())->where('id', $this->auth->id)->value('platform_service_fee');
@@ -534,11 +637,19 @@ class Order extends Api
             'type'       => 1, // 位置类型，1为起始位置，2为当前位置
             'createtime' => time(),
         ];
+        // 拿到订单信息手机号
+        $order = $this->model->where('id', $orderId)->find();
+
         Db::name('ddrive_order_location')->insert($data);
         if ($res) {
+            
             $distance = Lib::getDistance($latitude, $longitude, $latitude, $longitude);
             $price    = Lib::getPrice($distance, date('H', $order['createtime']), $order['createtime'], $order['reachtime']);
+            $sms_config = get_addon_config('alisms');
+            \app\common\library\Sms::notice($order -> mobile, '', $sms_config['template']['received']);
             $this->success("操作成功", ['price' => $price, 'distance' => $distance]);
+
+
         } else {
             $this->error('操作失败');
         }
@@ -618,6 +729,7 @@ class Order extends Api
             'status'   => 3,
             'price'    => $price,
             'distance' => $location['distance'],
+            'complete_time' => time(), // 订单完成时间
             'duration' => $duration,
         ];
         $res  = $this->model->where('id', $orderId)->update($data);

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => '打车代驾',
+    'name' => '保城代驾',
     'beian' => '',
     'cdnurl' => '',
     'version' => '1.0.1',
