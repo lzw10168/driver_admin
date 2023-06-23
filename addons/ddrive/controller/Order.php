@@ -562,42 +562,44 @@ class Order extends Api
                 'platform_service_fee' => number_format(($price * ($platform_service_fee / 100)), 2),
                 'insurance_fee'        => number_format(($insurance_fee), 2),
             ];
-            Db::name('details')->insert([
-              'user_id'        => $order['driver_id'],
-              'fluctuate_type' => 2,
-              'msg'            => '平台服务费',
-              'amount'         => number_format(($price * ($platform_service_fee / 100)), 2),
-              'assets_type'    => 2,
-              'source_type'    => 2,
-              'createtime'     => time(),
-              'form_id'        => $orderId,
-          ]);
-          Db::name('details')->insert([
-            'user_id'        => $order['driver_id'],
-            'fluctuate_type' => 1,
-            'msg'            => '代驾线下款',
-            'amount'         => number_format(($price ), 2),
-            'assets_type'    => 2,
-            'source_type'    => 2,
-            'createtime'     => time(),
-            'form_id'        => $orderId,
-        ]);
-          Db::name('details')->insert([
-            'user_id'        => $order['driver_id'],
-            'fluctuate_type' => 2,
-            'msg'            => '订单保险费',
-            'amount'         => number_format(($insurance_fee), 2),
-            'assets_type'    => 2,
-            'source_type'    => 2,
-            'createtime'     => time(),
-            'form_id'        => $orderId,
-        ]);
+
 
           // 增加会员积分
           $pointLib = new \addons\ddrive\library\Point;
           $pointLib->orderDone($order);
             if ($user_res) {
-                $this->success('操作成功');
+                Db::name('details')->insert([
+                  'user_id'        => $order['driver_id'],
+                  'fluctuate_type' => 2,
+                  'msg'            => '平台服务费',
+                  'amount'         => number_format(($price * ($platform_service_fee / 100)), 2),
+                  'assets_type'    => 2,
+                  'source_type'    => 2,
+                  'createtime'     => time(),
+                  'form_id'        => $orderId,
+              ]);
+              Db::name('details')->insert([
+                'user_id'        => $order['driver_id'],
+                'fluctuate_type' => 1,
+                'msg'            => '代驾线下款',
+                'amount'         => number_format(($price ), 2),
+                'assets_type'    => 2,
+                'source_type'    => 2,
+                'createtime'     => time(),
+                'form_id'        => $orderId,
+            ]);
+              Db::name('details')->insert([
+                'user_id'        => $order['driver_id'],
+                'fluctuate_type' => 2,
+                'msg'            => '订单保险费',
+                'amount'         => number_format(($insurance_fee), 2),
+                'assets_type'    => 2,
+                'source_type'    => 2,
+                'createtime'     => time(),
+                'form_id'        => $orderId,
+            ]);
+            $this->success('操作成功');
+
             } else {
                 $this->model->where('id', $orderId)->update($data);
                 $this->error('操作失败');
