@@ -549,6 +549,7 @@ class Order extends Api
             $platform_service_fee      = get_addon_config('ddrive')['platform_service_fee'];
             $insurance_fee             = get_addon_config('ddrive')['insurance_fee'];
             $user_platform_service_fee = (new User())->where('id', $this->auth->id)->value('platform_service_fee');
+            $driver_name               = (new User())->where('id', $this->auth->id)->value('nickname');
             //累加服务费
             // 直接扣除余额
             $user_res = (new User())->where('id', $this->auth->id)->setDec('money', $price + number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee);
@@ -577,17 +578,20 @@ class Order extends Api
                   'source_type'    => 2,
                   'createtime'     => time(),
                   'form_id'        => $orderId,
+                  'driver_name'    => $driver_name,
               ]);
-              Db::name('details')->insert([
-                'user_id'        => $order['driver_id'],
-                'fluctuate_type' => 1,
-                'msg'            => '代驾线下款',
-                'amount'         => number_format(($price ), 2),
-                'assets_type'    => 2,
-                'source_type'    => 2,
-                'createtime'     => time(),
-                'form_id'        => $orderId,
-            ]);
+            //   Db::name('details')->insert([
+            //     'user_id'        => $order['driver_id'],
+            //     'fluctuate_type' => 1,
+            //     'msg'            => '代驾线下款',
+            //     'amount'         => number_format(($price ), 2),
+            //     'assets_type'    => 2,
+            //     'source_type'    => 2,
+            //     'createtime'     => time(),
+            //     'form_id'        => $orderId,
+            //     'driver_name'    => $driver_name,
+
+            // ]);
               Db::name('details')->insert([
                 'user_id'        => $order['driver_id'],
                 'fluctuate_type' => 2,
@@ -597,10 +601,14 @@ class Order extends Api
                 'source_type'    => 2,
                 'createtime'     => time(),
                 'form_id'        => $orderId,
+                'driver_name'    => $driver_name,
+
             ]);
+            $this->model->where('id', $orderId)->update($data);
             $this->success('操作成功');
 
             } else {
+               $data -> status = 3;
                 $this->model->where('id', $orderId)->update($data);
                 $this->error('操作失败');
             }

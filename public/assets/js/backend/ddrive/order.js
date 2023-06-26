@@ -48,7 +48,17 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     ]
                 ]
             });
+            //当表格数据加载完成时
+table.on('load-success.bs.table', function (e, data) {
+  //这里可以获取从服务端获取的JSON数据
+  var price = 0;
+  data.rows.forEach(function (item) {
+    price += +item.price;
+  });
+  //这里我们手动设置底部的值
+  $("#money").text(parseInt(price).toFixed(2));
 
+});
             // 为表格绑定事件
             Table.api.bindevent(table);
         },

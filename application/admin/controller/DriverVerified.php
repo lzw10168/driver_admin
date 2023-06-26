@@ -61,13 +61,13 @@ class DriverVerified extends Backend
                 ->order($sort, $order)
                 ->paginate($limit);
             foreach ($list as $row){
-                $sign_areas = Db::name('areas')->where(['id' => $row['sign_city']])->find();
-                $areas     = Db::name('areas')->where(['id' => $row['area']])->find();
-                $row['sign_province_name'] = $sign_areas['province'];
-                $row['sign_city_name'] = $sign_areas['city'];
-                $row['province'] = $areas['province'];
-                $row['city'] = $areas['city'];
-                $row['area'] = $areas['district'];
+                // $sign_areas = Db::name('areas')->where(['id' => $row['sign_city']])->find();
+                // $areas     = Db::name('areas')->where(['id' => $row['area']])->find();
+                // $row['sign_province_name'] = $sign_areas['province'];
+                // $row['sign_city_name'] = $sign_areas['city'];
+                // $row['province'] = $areas['province'];
+                // $row['city'] = $areas['city'];
+                // $row['area'] = $areas['district'];
                 $row->getRelation('user')->visible(['username','mobile']);
             }
             $result = array("total" => $list->total(), "rows" => $list->items());

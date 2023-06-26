@@ -20,12 +20,20 @@
                          <a href="javascript:;" class="btn btn-success btn-add {:$auth->check('ddrive/order/add')?'':'hide'}" title="{:__('Add')}" ><i class="fa fa-plus"></i> {:__('Add')}</a>
                         <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled {:$auth->check('ddrive/order/edit')?'':'hide'}" title="{:__('Edit')}" ><i class="fa fa-pencil"></i> {:__('Edit')}</a>
                         <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled {:$auth->check('ddrive/order/del')?'':'hide'}" title="{:__('Delete')}" ><i class="fa fa-trash"></i> {:__('Delete')}</a>                        
+                        
                     </div>
                     <table id="table" class="table table-striped table-bordered table-hover table-nowrap"
                            data-operate-edit="{:$auth->check('ddrive/order/edit')}" 
                            data-operate-del="{:$auth->check('ddrive/order/del')}" 
                            width="100%">
                     </table>
+                    <a href="javascript:;" class="btn btn-default" style="font-size:14px;color:dodgerblue;">
+                      <i class="fa fa-dollar"></i>
+                      <span class="extend">
+                          金额总和：<span id="money">0</span>
+                      </span>
+                  </a>
+                   
                 </div>
             </div>
 

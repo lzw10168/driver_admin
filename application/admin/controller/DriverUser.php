@@ -48,7 +48,54 @@ class DriverUser extends Backend
      * 需要将application/admin/library/traits/Backend.php中对应的方法复制到当前控制器,然后进行修改
      */
 
+     public function add()
+     {
+         if ($this->request->isPost()) {
+             $params = $this->request->post("row/a");
+             if ($params) {
+                 $params = $this->preExcludeFields($params);
+                 if ($this->dataLimit && $this->dataLimitFieldAutoFill) {
+                     $params[$this->dataLimitField] = $this->auth->id;
+                 }
+                 $result = false;
+                 Db::startTrans();
+                 try {
+                     //是否采用模型验证
+                     if ($this->modelValidate) {
+                         $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));
+                         $validate = is_bool($this->modelValidate) ? ($this->modelSceneValidate ? $name . '.add' : $name) : $this->modelValidate;
+                         $this->model->validateFailException(true)->validate($validate);
+                     }
+                     $result = $this->model->allowField(true)->save($params);
+                     Db::commit();
+                 } catch (ValidateException $e) {
+                     Db::rollback();
+                     $this->error($e->getMessage());
+                 } catch (PDOException $e) {
+                     Db::rollback();
+                     $this->error($e->getMessage());
+                 } catch (Exception $e) {
+                     Db::rollback();
+                     $this->error($e->getMessage());
+                 }
+                 if ($result !== false) {
+                  // 往driver_status表中插入一条数据
+                  $driver_status = [];
+                  $driver_status['user_id'] = $params['user_id'];
+                  $driver_status['status'] = '0';
+                  $driver_status['create_status'] = '0';
+                  $driver_status['createtime'] = time();
 
+                  Db::name('driver_status')->insert($driver_status);
+                     $this->success();
+                 } else {
+                     $this->error(__('No rows were inserted'));
+                 }
+             }
+             $this->error(__('Parameter %s can not be empty', ''));
+         }
+         return $this->view->fetch();
+     }
 
 
 
@@ -125,7 +172,6 @@ class DriverUser extends Backend
     {
         $params = $this->request->request('params');
         parse_str($params, $paramsArr);
-        print_r($paramsArr);
         if (isset($paramsArr)) {
             $field = $this->model::get($ids);
             if ($paramsArr['status'] == 0) {

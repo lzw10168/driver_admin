@@ -58,14 +58,16 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
         layer.prompt({
           title: '批量充值',
-          placeholder: '请输入充值金额',
+          placeholder: '请输入充值金额, 减少金额请加 - 号',
           value: 100,
           formType: 0,
           type: 'number'
         }, function (value, index, elem) {
           if (value === '') return elem.focus();
-          // 判断是否是数字
-          if (!/^[0-9]+.?[0-9]*$/.test(value)) {
+          // 判断是否是数字,负数也可以
+          
+          if (!/^[-]?[0-9]+\.?[0-9]*$/.test(value)) {
+
             layer.msg('请输入数字');
             return elem.focus();
           }
@@ -91,7 +93,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
       Controller.api.bindevent();
     },
     edit: function () {
-      // Controller.api.bindevent();
+      Controller.api.bindevent();
     },
     api: {
       bindevent: function () {
