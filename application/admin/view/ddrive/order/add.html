@@ -272,6 +272,50 @@
   const c_distance = $('#c-distance');
   const c_estimated_price = $('#c-estimated_price');
   // 当#c-distance内容发生变化时，计算#c-estimated_price 的值, 根据上面规则计算
+
+  const c_end_latitude = $('#c-end_latitude');
+  const c_end_longitude = $('#c-end_longitude');
+  const c_start_latitude = $('#c-start_latitude');
+  const c_start_longitude = $('#c-start_longitude');
+  function calcDistance() {
+    const end_latitude = c_end_latitude.val();
+    const end_longitude = c_end_longitude.val();
+    const start_latitude = c_start_latitude.val();
+    const start_longitude = c_start_longitude.val();
+    console.log('end_latitude: ', end_latitude);
+    if (end_latitude && end_longitude && start_latitude && start_longitude) {
+      // 计算距离
+        // https://apis.map.qq.com/ws/direction/v1/driving/?from=39.915285,116.403857&to=39.915285,116.803857&waypoints=39.111,116.112;39.112,116.113&output=json&callback=cb&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77
+      const url = 'https://apis.map.qq.com/ws/direction/v1/driving/?from=' + start_latitude + ',' + start_longitude + '&to=' + end_latitude + ',' + end_longitude + '&output=json&callback=cb&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7'
+      // 用fetch请求数据
+      fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        console.log('data: ', data);
+        const distance = data.result.routes[0].distance / 1000;
+        c_distance.val(distance);
+        // 判断当前时间是在晚上还是白天
+        const now = new Date();
+        const hour = now.getHours();
+        const is_light = hour >= excision_start_time && hour < excision_time;
+        // 计算价格
+        const acturl_base_price = is_light ? base_price : night_base_price;
+        const price = distance <= mileage ? acturl_base_price : (distance <= mileage ? acturl_base_price + (distance - mileage) * kilometer_price : acturl_base_price + (mileage - 0) * kilometer_price + (distance - mileage) * kilometer_price * 1.5);
+        c_estimated_price.val(price);
+      }).catch(function (e) {
+        console.log('Oops, error');
+      });
+   
+    }
+  }
+  // 监听起点经纬度和终点经纬度的变化，计算距离
+  // c_end_latitude.on('change',() => {
+  //   calcDistance();
+  // } );
+  // c_end_longitude.on('change', calcDistance);
+  // c_start_latitude.on('change', calcDistance);
+  // c_start_longitude.on('change', calcDistance);
+
   c_distance.on('change', function () {
     const distance = $(this).val();
     // 判断当前时间是在晚上还是白天

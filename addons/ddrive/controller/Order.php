@@ -195,7 +195,7 @@ class Order extends Api
         }
         $this->success("", $list);
     }
-    // 司机手动创建订单
+    // 司机创建订单
     public function deriverCreate()
     {
         $driver_user = $this->auth->getUser();
@@ -250,7 +250,16 @@ class Order extends Api
         // $end_address      = $this->request->post('end_address');
         $end_latitude     = $this->request->post('end_latitude');
         $end_longitude    = $this->request->post('end_longitude');
-        $distance         = Lib::getDistance($start_latitude, $start_longitude, $end_latitude, $end_longitude);
+        // https://apis.map.qq.com/ws/direction/v1/driving/?from=39.915285,116.403857&to=39.915285,116.803857&waypoints=39.111,116.112;39.112,116.113&output=json&callback=cb&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77
+        // 发起get请求计算距离
+        $url = 'https://apis.map.qq.com/ws/direction/v1/driving/?from=' . $start_latitude . ',' . $start_longitude . '&to=' . $end_latitude . ',' . $end_longitude . '&output=json&callback=cb&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7';
+
+        $res = file_get_contents($url);
+        $res = json_decode($res, true);
+        $distance = $res['result']['routes'][0]['distance'];
+        // $distance1         = Lib::getDistance($start_latitude, $start_longitude, $end_latitude, $end_longitude);
+        // print_r($distance1);
+        // exit;
         // 下单数据
         $data = [
             'mobile'           => $mobile,
@@ -549,14 +558,14 @@ class Order extends Api
             $platform_service_fee      = get_addon_config('ddrive')['platform_service_fee'];
             $insurance_fee             = get_addon_config('ddrive')['insurance_fee'];
             $user_platform_service_fee = (new User())->where('id', $this->auth->id)->value('platform_service_fee');
-            $driver_name               = (new User())->where('id', $this->auth->id)->value('nickname');
+            // $driver_name               = (new User())->where('id', $this->auth->id)->value('nickname');
             //累加服务费
             // 直接扣除余额
             $user_res = (new User())->where('id', $this->auth->id)->setDec('money', $price + number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee);
             // $user_res = (new User())->where('id', $this->auth->id)->update(['platform_service_fee' => $user_platform_service_fee + number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee]);
             // 修改订单信息
             $data = [
-                'status'               => 3,
+                'status'               => 99,
                 'price'                => $price,
                 'distance'             => $location['distance'],
                 'duration'             => $duration,
@@ -578,7 +587,7 @@ class Order extends Api
                   'source_type'    => 2,
                   'createtime'     => time(),
                   'form_id'        => $orderId,
-                  'driver_name'    => $driver_name,
+                  // 'driver_name'    => $driver_name,
               ]);
             //   Db::name('details')->insert([
             //     'user_id'        => $order['driver_id'],
@@ -601,7 +610,7 @@ class Order extends Api
                 'source_type'    => 2,
                 'createtime'     => time(),
                 'form_id'        => $orderId,
-                'driver_name'    => $driver_name,
+                // 'driver_name'    => $driver_name,
 
             ]);
             $this->model->where('id', $orderId)->update($data);
