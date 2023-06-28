@@ -31,7 +31,8 @@ class User extends Model
     protected static function init()
     {
         self::beforeUpdate(function ($row) {
-            $changed = $row->getChangedData();
+          $changed = $row->getChangedData();
+          // print_r($changed);
             //如果有修改密码
             if (isset($changed['password'])) {
                 if ($changed['password']) {

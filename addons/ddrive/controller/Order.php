@@ -218,15 +218,18 @@ class Order extends Api
         // 更新nickname
         if (!$user) {
             // 如果没有该用户, 则创建用户
+            $salt = \fast\Random::alnum();
+            $password = \app\common\library\Auth::instance()->getEncryptPassword('123456', $salt);
             $user = Db::name('user')->insertGetId([
                 'mobile' => $mobile,
                 'username' => $mobile, // 'username' => '司机' . $mobile,
                 'nickname' => $name,
-                'password' => md5('123456'), // 默认密码
+                'password' => $password, // 默认密码
                 'status' => 'normal',
                 'money' => 0,
                 'createtime' => time(),
                 'updatetime' => time(),
+                'salt' => $salt,
             ]);
         } else {
             // 如果有该用户, 则更新用户
@@ -274,7 +277,7 @@ class Order extends Api
             'end_address'      => $this->request->post('end_address'),
             'end_latitude'     => $this->request->post('end_latitude'),
             'end_longitude'    => $this->request->post('end_longitude'),
-            'distance'         => $distance/ 1000,
+            'distance'         => $distance / 1000,
             'duration'         => $this->request->post('duration'),
             'estimated_price'  => Lib::getPrice($distance, date('H', time())),
             'user_id'          => $id ,
@@ -565,9 +568,9 @@ class Order extends Api
             // $user_res = (new User())->where('id', $this->auth->id)->update(['platform_service_fee' => $user_platform_service_fee + number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee]);
             // 修改订单信息
             $data = [
-                'status'               => 99,
+                'status'               => 3,
                 'price'                => $price,
-                'distance'             => $location['distance'],
+                'distance'             => $location['distance'] / 1000,
                 'duration'             => $duration,
                 'platform_service_fee' => number_format(($price * ($platform_service_fee / 100)), 2),
                 'insurance_fee'        => number_format(($insurance_fee), 2),
@@ -613,7 +616,10 @@ class Order extends Api
                 // 'driver_name'    => $driver_name,
 
             ]);
-            $this->model->where('id', $orderId)->update($data);
+            $this->model->where('id', $orderId)->update([
+              'platform_service_fee' => number_format(($price * ($platform_service_fee / 100)), 2),
+                'insurance_fee'        => number_format(($insurance_fee), 2),
+            ]);
             $this->success('操作成功');
 
             } else {

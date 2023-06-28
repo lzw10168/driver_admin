@@ -111,6 +111,16 @@ class DriverVerified extends Backend
                     $result = $row->allowField(true)->save($params);
                     if($params['status'] == 1){
                         Db::name('user_verified')->where('user_id', $row['user_id'])->setField('driver_verified', 1);
+                        // 查找driver_status表中是否有数据
+                        $driver_status = Db::name('driver_status')->where('user_id', $row['user_id'])->find();
+                        if(!$driver_status){
+                          $driver_status = [];
+                          $driver_status['user_id'] = $row['user_id'];
+                          $driver_status['status'] = '0';
+                          $driver_status['create_status'] = '0';
+                          $driver_status['createtime'] = time();
+                          Db::name('driver_status')->insert($driver_status);
+                        }
                     }
                     if($params['status'] == -1){
                         Db::name('user_verified')->where('user_id', $row['user_id'])->setField('driver_verified', -1);

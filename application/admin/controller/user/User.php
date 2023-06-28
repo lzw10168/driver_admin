@@ -65,6 +65,14 @@ class User extends Backend
     public function add()
     {
         if ($this->request->isPost()) {
+            // 加密密码
+            $salt = \fast\Random::alnum();
+            // 取出密码
+            $password = $this->request->post('row.password');
+            $password = Auth::instance()->getEncryptPassword($password, $salt);
+            //
+            $this->request->post('row.password', $password);
+            // 保存
             $this->token();
         }
         return parent::add();
