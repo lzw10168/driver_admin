@@ -30,6 +30,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'mobile', title: __('User.mobile')},
                         {field: 'driver.username', title: __('Driver_id')},
                         {field: 'driver.mobile', title: __('Driver.mobile')},
+                        {field: 'driver_truename', title: '司机姓名', operate:false},
                         {field: 'start_address', title: __('Start_address')},
                         {field: 'end_address', title: __('End_address')},
                         {field: 'price', title: __('Price'), operate:'BETWEEN'},

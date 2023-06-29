@@ -562,9 +562,12 @@ class Order extends Api
             $insurance_fee             = get_addon_config('ddrive')['insurance_fee'];
             $user_platform_service_fee = (new User())->where('id', $this->auth->id)->value('platform_service_fee');
             // $driver_name               = (new User())->where('id', $this->auth->id)->value('nickname');
+            // 从real_verified表中获取司机姓名
+            $driver_name = Db::name('real_verified')->where('user_id', $this->auth->id)->value('truename');
+            // 司机之前余额
+            $driver_money = (new User())->where('id', $this->auth->id)->value('money');
             //累加服务费
-            // 直接扣除余额
-            $user_res = (new User())->where('id', $this->auth->id)->setDec('money', $price + number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee);
+            $user_res = (new User())->where('id', $this->auth->id)->setDec('money', number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee);
             // $user_res = (new User())->where('id', $this->auth->id)->update(['platform_service_fee' => $user_platform_service_fee + number_format(($price * ($platform_service_fee / 100)), 2) + $insurance_fee]);
             // 修改订单信息
             $data = [
@@ -580,6 +583,8 @@ class Order extends Api
           // 增加会员积分
           $pointLib = new \addons\ddrive\library\Point;
           $pointLib->orderDone($order);
+          // 剩余金额
+          $money = $driver_money - number_format(($price * ($platform_service_fee / 100)), 2) ;
             if ($user_res) {
                 Db::name('details')->insert([
                   'user_id'        => $order['driver_id'],
@@ -590,7 +595,8 @@ class Order extends Api
                   'source_type'    => 2,
                   'createtime'     => time(),
                   'form_id'        => $orderId,
-                  // 'driver_name'    => $driver_name,
+                  'driver_name'    => $driver_name,
+                  'driver_balance'=> $money,
               ]);
             //   Db::name('details')->insert([
             //     'user_id'        => $order['driver_id'],
@@ -604,6 +610,7 @@ class Order extends Api
             //     'driver_name'    => $driver_name,
 
             // ]);
+            $money = $money - $insurance_fee;
               Db::name('details')->insert([
                 'user_id'        => $order['driver_id'],
                 'fluctuate_type' => 2,
@@ -613,12 +620,12 @@ class Order extends Api
                 'source_type'    => 2,
                 'createtime'     => time(),
                 'form_id'        => $orderId,
-                // 'driver_name'    => $driver_name,
-
+                'driver_name'    => $driver_name,
+                'driver_balance'=> $money,
             ]);
             $this->model->where('id', $orderId)->update([
               'platform_service_fee' => number_format(($price * ($platform_service_fee / 100)), 2),
-                'insurance_fee'        => number_format(($insurance_fee), 2),
+              'insurance_fee'        => number_format(($insurance_fee), 2),
             ]);
             $this->success('操作成功');
 

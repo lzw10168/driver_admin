@@ -40,11 +40,14 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         // {field: 'fluctuate_type', title: __('Fluctuate_type'), searchList: {"1":__('Fluctuate_type 1'), "2":__('Fluctuate_type 2')}, formatter: Table.api.formatter.normal},
                         {field: 'msg', title: __('Msg'), operate: 'LIKE'},
                         {field: 'amount', title: __('Amount')},
+                        {field: 'driver_balance', title: '司机余额'},
+                        // 司机姓名
+                        {field: 'driver_name', title: '司机姓名', operate: 'LIKE'},
+
                         // {field: 'assets_type', title: __('Assets_type'), searchList: {"1":__('Assets_type 1'),"2":__('Assets_type 2')}, formatter: Table.api.formatter.normal},
                         // {field: 'source_type', title: __('Source_type'), searchList: {"1":__('Source_type 1'),"2":__('Source_type 2')}, formatter: Table.api.formatter.normal},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', autocomplete:false, formatter: Table.api.formatter.datetime},
                         // 司机姓名
-                        {field: 'driver_name', title: '司机姓名', operate: 'LIKE'},
                         {field: 'form_id', title: '订单编号'},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]

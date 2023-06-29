@@ -65,8 +65,11 @@ class Order extends Backend
                 ->limit($offset, $limit)
                 ->select();
 
-            foreach ($list as $row) {
 
+            foreach ($list as $row) {
+              // 从real_verified表中拿到真实姓名
+              $truename = Db::name('real_verified')->where('user_id',$row['user_id'])->value('truename');
+              $row['driver_truename'] = $truename;
             }
             $list   = collection($list)->toArray();
             $result = array("total" => $total, "rows" => $list);
