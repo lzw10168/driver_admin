@@ -68,7 +68,7 @@ class Order extends Backend
 
             foreach ($list as $row) {
               // 从real_verified表中拿到真实姓名
-              $truename = Db::name('real_verified')->where('user_id',$row['user_id'])->value('truename');
+              $truename = Db::name('real_verified')->where('user_id',$row['driver_id'])->value('truename');
               $row['driver_truename'] = $truename;
             }
             $list   = collection($list)->toArray();
