@@ -1,0 +1,70 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Fluctuate_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-fluctuate_type" data-rule="required" class="form-control selectpicker" name="row[fluctuate_type]">
+                {foreach name="fluctuateTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.fluctuate_type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Msg')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-msg" class="form-control" name="row[msg]" type="text" value="{$row.msg|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-amount" class="form-control" name="row[amount]" type="number" value="{$row.amount|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Assets_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-assets_type" class="form-control selectpicker" name="row[assets_type]">
+                {foreach name="assetsTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.assets_type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Source_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-source_type" class="form-control selectpicker" name="row[source_type]">
+                {foreach name="sourceTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.source_type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Form_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-form_id" data-rule="required" data-source="form/index" class="form-control selectpage" name="row[form_id]" type="text" value="{$row.form_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

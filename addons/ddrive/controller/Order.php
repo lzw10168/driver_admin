@@ -253,13 +253,25 @@ class Order extends Api
         // $end_address      = $this->request->post('end_address');
         $end_latitude     = $this->request->post('end_latitude');
         $end_longitude    = $this->request->post('end_longitude');
-        // https://apis.map.qq.com/ws/direction/v1/driving/?from=39.915285,116.403857&to=39.915285,116.803857&waypoints=39.111,116.112;39.112,116.113&output=json&callback=cb&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77
-        // 发起get请求计算距离
-        $url = 'https://apis.map.qq.com/ws/direction/v1/driving/?from=' . $start_latitude . ',' . $start_longitude . '&to=' . $end_latitude . ',' . $end_longitude . '&output=json&callback=cb&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7';
+        $is_auto          = $this->request->post('is_auto');
+        
+        $estimated_price = '';
+        $distance = '';
 
-        $res = file_get_contents($url);
-        $res = json_decode($res, true);
-        $distance = $res['result']['routes'][0]['distance'];
+        if ($is_auto == '1') {
+          $estimated_price = '';
+          $distance = '';
+        } else {
+                  // https://apis.map.qq.com/ws/direction/v1/driving/?from=39.915285,116.403857&to=39.915285,116.803857&waypoints=39.111,116.112;39.112,116.113&output=json&callback=cb&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77
+          // 发起get请求计算距离
+          $url = 'https://apis.map.qq.com/ws/direction/v1/driving/?from=' . $start_latitude . ',' . $start_longitude . '&to=' . $end_latitude . ',' . $end_longitude . '&output=json&callback=cb&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7';
+
+          $res = file_get_contents($url);
+          $res = json_decode($res, true);
+          $distance = $res['result']['routes'][0]['distance'];
+          $estimated_price = Lib::getPrice($distance, date('H', time()));
+          $distance = $distance / 1000;
+        }
         // $distance1         = Lib::getDistance($start_latitude, $start_longitude, $end_latitude, $end_longitude);
         // print_r($distance1);
         // exit;
@@ -277,9 +289,9 @@ class Order extends Api
             'end_address'      => $this->request->post('end_address'),
             'end_latitude'     => $this->request->post('end_latitude'),
             'end_longitude'    => $this->request->post('end_longitude'),
-            'distance'         => $distance / 1000,
+            'distance'         => $distance,
             'duration'         => $this->request->post('duration'),
-            'estimated_price'  => Lib::getPrice($distance, date('H', time())),
+            'estimated_price'  => $estimated_price,
             'user_id'          => $id ,
             'reachtime'        => 0,
             'type'             => $type,
@@ -559,6 +571,12 @@ class Order extends Api
             Db::name('driver_status')->where('user_id', $this->auth->id)->update(['create_status' => 0]);
 
             $platform_service_fee      = get_addon_config('ddrive')['platform_service_fee'];
+            if ($price > 150) {
+              $platform_service_fee = get_addon_config('ddrive')['platform_service_fee_150'];
+            }
+            if ($price > 250) {
+              $platform_service_fee = get_addon_config('ddrive')['platform_service_fee_250'];
+            }
             $insurance_fee             = get_addon_config('ddrive')['insurance_fee'];
             $user_platform_service_fee = (new User())->where('id', $this->auth->id)->value('platform_service_fee');
             // $driver_name               = (new User())->where('id', $this->auth->id)->value('nickname');
@@ -674,7 +692,28 @@ class Order extends Api
 
         Db::name('ddrive_order_location')->insert($data);
         if ($res) {
-            
+            // 如果order表中estimated_price, distance 为空，计算价格,和距离, 且更新订单表中的起始位置
+            if ($order['estimated_price'] == '0.00' || $order['distance'] == '0.00') {
+                $end_latitude       = $order['end_latitude'];
+                $end_longitude      = $order['end_longitude'];
+                // 起点逆地址解析
+                // https://apis.map.qq.com/ws/geocoder/v1/?location=
+                // 39.984154,116.307490&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&get_poi=1
+                $url = 'https://apis.map.qq.com/ws/geocoder/v1/?location=' . $latitude . ',' . $longitude . '&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7&get_poi=1';
+                $res = file_get_contents($url);
+                $res = json_decode($res, true);
+                $address = $res['result']['address'];
+
+                $url = 'https://apis.map.qq.com/ws/direction/v1/driving/?from=' . $latitude . ',' . $longitude . '&to=' . $end_latitude . ',' . $end_longitude . '&output=json&callback=cb&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7';
+                $res = file_get_contents($url);
+                $res = json_decode($res, true);
+                $distance = $res['result']['routes'][0]['distance'];
+                $estimated_price = Lib::getPrice($distance, date('H', time()));
+                $distance = $distance / 1000;
+                $this->model->where('id', $orderId)->update(['estimated_price' => $estimated_price, 'distance' => $distance, 'start_address' => $address, 'start' => $address]);
+            }
+
+
             $distance = Lib::getDistance($latitude, $longitude, $latitude, $longitude);
             $price    = Lib::getPrice($distance, date('H', $order['createtime']), $order['createtime'], $order['reachtime']);
             $sms_config = get_addon_config('alisms');

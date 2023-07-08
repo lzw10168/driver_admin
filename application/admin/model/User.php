@@ -44,7 +44,12 @@ class User extends Model
                 }
             }
         });
-
+        // 创建前事件
+        self::beforeInsert(function ($row) {
+            $salt = \fast\Random::alnum();
+            $row->salt = $salt;
+            $row->password = \app\common\library\Auth::instance()->getEncryptPassword($row['password'], $salt);
+        });
 
         self::beforeUpdate(function ($row) {
             $changedata = $row->getChangedData();

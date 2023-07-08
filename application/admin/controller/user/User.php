@@ -69,11 +69,23 @@ class User extends Backend
             $salt = \fast\Random::alnum();
             // 取出密码
             $password = $this->request->post('row.password');
+            $username = $this->request->post('row.username');
+            $mobile = $this->request->post('row.mobile');
+            // 检查用户名是否存在, 手机号是否存在
+            if ($this->model->where('username', $username)->find()) {
+                $this->error('用户名已存在');
+            }
+            // if ($this->model->where('mobile', $mobile)->find()) {
+            //     $this->error('手机号已存在');
+            // }
             $password = Auth::instance()->getEncryptPassword($password, $salt);
-            //
-            $this->request->post('row.password', $password);
             // 保存
             $this->token();
+
+            // 直接创建用户
+            $this->request->post('row.password', $password);
+            $this->request->post('row.salt', $salt);
+            $this->request->post('row.register_ip', $this->request->ip());
         }
         return parent::add();
     }

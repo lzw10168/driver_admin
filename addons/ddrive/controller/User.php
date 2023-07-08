@@ -9,6 +9,7 @@ use addons\ddrive\model\DriverVerified;
 use addons\ddrive\model\Hyaddress;
 use addons\ddrive\model\RealVerified;
 use addons\epay\library\Service;
+use addons\ddrive\model\Order;
 use app\admin\model\Complaint;
 use app\admin\model\ComplaintCategory;
 use app\admin\model\Coupon;
@@ -718,17 +719,15 @@ class User extends Api
     {
         $begin_time           = strtotime(date('Y-m-d', time()));
         $end_time             = $begin_time + 86400;
-        $today_income         = (new Details())
+        $today_income         = (new Order())
             ->where('user_id', $this->auth->id)
-            ->where('assets_type', 2)
-            ->where('fluctuate_type', 1)
+            ->where('status', 99)
             ->whereBetween('createtime', [$begin_time, $end_time])
-            ->sum('amount');
-        $income               = (new Details())
+            ->sum('price');
+        $income               = (new Order())
             ->where('user_id', $this->auth->id)
-            ->where('assets_type', 2)
-            ->where('fluctuate_type', 1)
-            ->sum('amount');
+            ->where('status', 99)
+            ->sum('price');
         $user                 = Db::name('user')->where('id', $this->auth->id)->field('money,platform_service_fee')->find();
         $platform_service_fee = get_addon_config('ddrive')['platform_service_fee'] / 100;
         $this->success('成功', [

@@ -87,6 +87,23 @@ class DriverUser extends Backend
                   $driver_status['createtime'] = time();
 
                   Db::name('driver_status')->insert($driver_status);
+
+                  $real_verified = [];
+                  $real_verified['user_id'] = $params['user_id'];
+                  $real_verified['status'] = '1';
+                  $real_verified['createtime'] = time();
+                  $real_verified['truename'] = $params['truename'];
+                  Db::name('real_verified')->insert($real_verified);
+
+                  // user_verified表中插入一条数据
+                  $user_verified = [];
+                  $user_verified['user_id'] = $params['user_id'];
+                  $user_verified['real_verified'] = '1';
+                  $user_verified['driver_verified'] = '1';
+                  $user_verified['card_verified'] = '1';
+                  $user_verified['createtime'] = time();
+                  $user_verified['updatetime'] = time();
+                  Db::name('user_verified')->insert($user_verified);
                      $this->success();
                  } else {
                      $this->error(__('No rows were inserted'));
@@ -155,7 +172,23 @@ class DriverUser extends Backend
         $res = false;
         foreach ($ids as $key => $value) {
             $user_id = Db::name('driver_verified')->where('id', $value)->value('user_id');
+            $driver_name = Db::name('real_verified')->where('user_id', $user_id)->value('truename');
+            $before_money = Db::name('user')->where('id', $user_id)->value('money');
+            $after_money = $before_money + $money;
+            $mobile = Db::name('user')->where('id', $user_id)->value('mobile');
             $res = Db::name('user')->where('id', $user_id)->setInc('money', $money);
+            // 写入日志money_log
+            $money_log = [];
+            $money_log['user_id'] = $user_id;
+            $money_log['money'] = $money;
+            $money_log['before'] = $before_money;
+            $money_log['after'] = $after_money;
+            $money_log['memo'] = '管理员后台充值';
+            $money_log['createtime'] = time();
+            $money_log['driver_name'] = $driver_name;
+            $money_log['mobile'] = $mobile;
+
+            Db::name('user_money_log')->insert($money_log);
         }
         
         if ($res) {
