@@ -30,6 +30,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             { field: 'user_id', title: __('User_id') },
             { field: 'user.nickname', title: '昵称' },
             { field: 'user.username', title: __('User.username') },
+            { field: 'truename', title: '司机姓名' },
             { field: 'user.mobile', title: __('User.mobile') },
             { field: 'user.money', title: '余额' },
             {

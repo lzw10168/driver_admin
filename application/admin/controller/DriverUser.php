@@ -145,10 +145,13 @@ class DriverUser extends Backend
             // 再通过user_id去driver_status表中取出driver_status, driver_create_status
             foreach ($list as $key => $value) {
               $driver_status = Db::name('driver_status')->where('user_id', $value['user_id'])->find();
+              $real_verified = Db::name('real_verified')->where('user_id', $value['user_id'])->find();
               // 日志中打印
               if ($driver_status) {
                 $list[$key]['driver_status'] = $driver_status['status'];
                 $list[$key]['driver_create_status'] = $driver_status['create_status'];
+                $list[$key]['truename'] = $real_verified['truename'];
+
               }
           }
             $result = ["total" => $list->total(), "rows" => $list->items()];

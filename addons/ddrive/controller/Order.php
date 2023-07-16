@@ -439,7 +439,7 @@ class Order extends Api
     {
         $orderId     = $this->request->param('order_id');
         $cancel_type = $this->request->param('cancel_type');
-        $res         = $this->model->where('id', $orderId)->update(['status' => -1, 'cancel_type' => $cancel_type]);
+        $res         = $this->model->where('id', $orderId)->update(['status' => -1, 'cancel_type' => $cancel_type, 'waiting_status' => 0]);
         if ($res) {
             $this->success('订单取消成功');
         } else {
@@ -515,7 +515,39 @@ class Order extends Api
             $this->error('接单失败');
         }
     }
-
+    // Waittime
+    public function updateWaittime() {
+      $orderId = $this->request->param('order_id');
+      $waittime = $this->request->param('waittime');
+      $res = $this->model->where('id', $orderId)->update(['waittime' => $waittime]);
+      if ($res) {
+        $this->success('更新成功');
+      } else {
+        $this->error('更新失败');
+      }
+    }
+    // update waiting_status
+    public function updateWaitingStatus() {
+      $orderId = $this->request->param('order_id');
+      $waiting_status = $this->request->param('waiting_status');
+      if ($waiting_status == 1) {
+        $waiting_status = 1;
+      } else {
+        $waiting_status = 0;
+      }
+      $res = $this->model->where('id', $orderId)->update(['waiting_status' => $waiting_status]);
+      $this->success('更新成功');
+    }
+    public function updateWaitOutTime() {
+      // wait_out_time
+      $orderId = $this->request->param('order_id');
+      $res = $this->model->where('id', $orderId)->update(['wait_out_time' => time()]);
+      if ($res) {
+        $this->success('更新成功');
+      } else {
+        $this->error('更新失败');
+      }
+    }
     /**
      * 到达出发地
      *
@@ -524,7 +556,6 @@ class Order extends Api
     public function reach()
     {
         $orderId = $this->request->param('order_id');
-
         $res = $this->model->where('id', $orderId)->update(['status' => 4, 'reachtime' => time()]);
         if ($res) {
             $this->success('操作成功');
@@ -563,7 +594,9 @@ class Order extends Api
             $order = $this->model->where('id', $orderId)->find();
             // 查询订单上次位置
             $location = Db::name('ddrive_order_location')->where('order_id', $orderId)->where('type', 2)->order('id desc')->find();
-            $price    = Lib::getPrice($location['distance'], date('H', $order['createtime']));
+            // $price    = Lib::getPrice($location['distance'], date('H', $order['createtime']));
+            $price    = Lib::getPrice($location['distance'], date('H', $order['createtime']), $order['reachtime'], $order['starttime'], $order['waittime']);
+
             // 计算时间
             $duration = $location['createtime'] - $order['createtime'];
 
@@ -645,6 +678,8 @@ class Order extends Api
               'platform_service_fee' => number_format(($price * ($platform_service_fee / 100)), 2),
               'insurance_fee'        => number_format(($insurance_fee), 2),
             ]);
+            $sms_config = get_addon_config('alisms');
+            \app\common\library\Sms::notice($order -> mobile, '', $sms_config['template']['offline_order']);
             $this->success('操作成功');
 
             } else {
@@ -704,18 +739,18 @@ class Order extends Api
                 $res = json_decode($res, true);
                 $address = $res['result']['address'];
 
-                $url = 'https://apis.map.qq.com/ws/direction/v1/driving/?from=' . $latitude . ',' . $longitude . '&to=' . $end_latitude . ',' . $end_longitude . '&output=json&callback=cb&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7';
-                $res = file_get_contents($url);
-                $res = json_decode($res, true);
-                $distance = $res['result']['routes'][0]['distance'];
-                $estimated_price = Lib::getPrice($distance, date('H', time()));
-                $distance = $distance / 1000;
-                $this->model->where('id', $orderId)->update(['estimated_price' => $estimated_price, 'distance' => $distance, 'start_address' => $address, 'start' => $address]);
+                // $url = 'https://apis.map.qq.com/ws/direction/v1/driving/?from=' . $latitude . ',' . $longitude . '&to=' . $end_latitude . ',' . $end_longitude . '&output=json&callback=cb&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7';
+                // $res = file_get_contents($url);
+                // $res = json_decode($res, true);
+                // $distance = $res['result']['routes'][0]['distance'];
+                // $estimated_price = Lib::getPrice($distance, date('H', time()));
+                // $distance = $distance / 1000;
+                $this->model->where('id', $orderId)->update(['start_address' => $address, 'start' => $address, 'start_latitude' => $latitude, 'start_longitude' => $longitude]);
             }
 
 
             $distance = Lib::getDistance($latitude, $longitude, $latitude, $longitude);
-            $price    = Lib::getPrice($distance, date('H', $order['createtime']), $order['createtime'], $order['reachtime']);
+            $price    = Lib::getPrice($distance, date('H', $order['createtime']), $order['reachtime'], $order['starttime'], $order['waittime']);
             $sms_config = get_addon_config('alisms');
             \app\common\library\Sms::notice($order -> mobile, '', $sms_config['template']['received']);
             $this->success("操作成功", ['price' => $price, 'distance' => $distance]);
@@ -736,10 +771,14 @@ class Order extends Api
         $orderId   = $this->request->param('order_id');
         $latitude  = $this->request->param('latitude');
         $longitude = $this->request->param('longitude');
+        $waittime  = $this->request->param('waittime') ? $this->request->param('waittime') : 0;
+        $distance = 0;
         // 查询订单上次位置
         $last = Db::name('ddrive_order_location')->where('order_id', $orderId)->where('type', 2)->order('id desc')->find();
         if (!$last) {
             $start    = Db::name('ddrive_order_location')->where('order_id', $orderId)->where('type', 1)->order('id desc')->find();
+            if ($start) {
+                
             $distance = Lib::getDistance($latitude, $longitude, $start['latitude'], $start['longitude']);
             // 首次更新位置
             $data = [
@@ -751,6 +790,8 @@ class Order extends Api
                 'createtime' => time(),
             ];
             $res  = Db::name('ddrive_order_location')->insert($data);
+          }
+
         } else {
             // 之后更新位置要根据上次位置算出行驶路程
             $thisdistance = Lib::getDistance($latitude, $longitude, $last['latitude'], $last['longitude']);
@@ -765,9 +806,16 @@ class Order extends Api
             $res    = Db::name('ddrive_order_location')->where('order_id', $orderId)->update($update);
         }
         // 计算价格返回
-        $order = $this->model->where('id', $orderId)->field('createtime,reachtime')->find();
-        $price = Lib::getPrice($distance, date('H', $order['createtime']), $order['createtime'], $order['reachtime']);
-        $this->success("", ['price' => $price, 'distance' => $distance]);
+        $order = $this->model->where('id', $orderId)->field('createtime,reachtime,starttime,waittime')->find();
+        // print_r(floor(($order['starttime'] - $order['reachtime'] + $order['waittime']) / 60));
+        if ($waittime) {
+          // 更新等待时间
+          $this->model->where('id', $orderId)->update(['waittime' => $waittime]);
+        } else {
+          $waittime = $order['waittime'];
+        }
+        $price = Lib::getPrice($distance, date('H', $order['createtime']), $order['reachtime'], $order['starttime'], $waittime);
+        $this->success("", ['price' => $price, 'distance' => $distance, 'waittime' => $waittime]);
     }
 
     /**
@@ -791,9 +839,19 @@ class Order extends Api
             $duration = 0;
         } else {
 
-          $price    = Lib::getPrice($location['distance'], date('H', $order['createtime']));
+          $price    = Lib::getPrice($location['distance'], date('H', $order['createtime']), $order['reachtime'], $order['starttime'], $order['waittime']);
+
           // 计算时间
-          $duration = $location['createtime'] - $order['createtime'];
+          $duration = $location['createtime'] - $order['starttime'];
+          $latitude  = $location['latitude'];
+          $longitude = $location['longitude'];
+          // 起点逆地址解析
+          // https://apis.map.qq.com/ws/geocoder/v1/?location=
+          // 39.984154,116.307490&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&get_poi=1
+          $url = 'https://apis.map.qq.com/ws/geocoder/v1/?location=' . $latitude . ',' . $longitude . '&key=ND6BZ-6VHWC-X7J23-AMYTL-WRRC3-N4BY7&get_poi=1';
+          $res = file_get_contents($url);
+          $res = json_decode($res, true);
+          $address = $res['result']['address'];
         }
         // 修改订单信息
         $data = [
@@ -802,6 +860,11 @@ class Order extends Api
             'distance' => $location['distance']/ 1000,
             'complete_time' => time(), // 订单完成时间
             'duration' => $duration,
+            'end_address' => $address,
+            'end' => $address,
+            'end_latitude' => $latitude,
+            'end_longitude' => $longitude,
+            'waiting_status' => 0, // 结束订单后，等待状态为0
         ];
         $res  = $this->model->where('id', $orderId)->update($data);
 

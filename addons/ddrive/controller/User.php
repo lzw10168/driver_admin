@@ -271,21 +271,21 @@ class User extends Api
         $user = $this->auth->getUser();
         $driver_status = $this->request->request('status');
         $driver_create_status = $this->request->request('create_status');
-
         //driver_status 表中更新
         $driver = Db::name('driver_status')->where('user_id', $user->id)->find();
         if ($driver) {
           // 判断一下是否为undefined, null, ''
           
-          if (!!$driver_status) {
-            print_r($driver_status);
+          if (isset($driver_status)) {
             // 更新
             Db::name('driver_status')->where('user_id', $user->id)->update(['status' => $driver_status]);
           }
-          if (!!$driver_create_status) {
+
+          if (isset($driver_create_status)) {
             // 更新
             Db::name('driver_status')->where('user_id', $user->id)->update(['create_status' => $driver_create_status]);
           }
+
         }
 
         $this->success('更新成功');
